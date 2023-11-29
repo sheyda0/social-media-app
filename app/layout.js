@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <div className="flex w-full h-full justify-between">
             <Sidebar />
-            <div className="flex flex-col px-[30px] w-[60%]">
+            <div className="flex flex-col px-[1.875rem] w-[60%]">
               <Header />
               <div>{children}</div>
             </div>

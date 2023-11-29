@@ -3,13 +3,14 @@ import Searchbar from "./Searchbar";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { AiOutlineMessage } from "react-icons/ai";
 import ToggleDarkModeBtn from "../buttons/ToggleDarkModeBtn";
+import Breadcrumb from "../Breadcrumb";
 
 const Header = () => {
   return (
-    <div className="mt-[30px] flex items-center justify-between w-full">
-      <div></div>
+    <div className="mt-[1.875rem] flex items-center justify-between w-full">
+      <Breadcrumb />
       <Searchbar />
-      <div className="flex gap-[12px]">
+      <div className="flex gap-[0.75rem]">
         <ToggleDarkModeBtn />
         <HeaderItem
           icon={
@@ -30,9 +31,6 @@ const Header = () => {
           }
           url="/messages"
         />
-        <div class="buttons">
-          <button className="raise">Raise</button>
-        </div>
       </div>
     </div>
   );

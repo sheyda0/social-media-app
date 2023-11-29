@@ -10,16 +10,16 @@ const SidebarItem = ({ item }) => {
   return (
     <Link
       href={item.path}
-      className={`px-[20px] block round ${
+      className={`px-[1.25rem] block round ${
         isActive ? "bg-purple text-milky font-semibold" : "text-gray"
       }`}
     >
       <div
-        className={`flex items-center justify-between w-full h-full py-[20px] ${
+        className={`flex items-center justify-between w-full h-full py-[1.25rem] ${
           !isActive && "borderb-gray"
         }`}
       >
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[0.625rem]">
           {isActive ? (
             <Image src={item.activeIcon} width={20} height={20} alt="" />
           ) : (

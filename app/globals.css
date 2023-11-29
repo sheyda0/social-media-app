@@ -4,12 +4,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,400;1,100&display=swap");
 
+@media screen and (max-width: 1710px) {
+  * {
+    font-size: 13px;
+  }
+}
+
 body {
   font-family: "Actor", sans-serif;
 }
 
 * {
   font-family: "Actor", sans-serif;
+}
+
+.medium-height {
+  height: 4rem;
 }
 
 .bg-dark-gray {
@@ -20,8 +30,12 @@ body {
   background: #1f1f26;
 }
 
+.bg-light-white {
+  background: #ede8f5;
+}
+
 .bg-light {
-  background: #f0eef4;
+  background: #f4f4f7;
 }
 
 .bg-purple {
@@ -40,6 +54,10 @@ body {
   color: #9798ad;
 }
 
+.text-purple {
+  color: #6149ef;
+}
+
 .borderb-gray {
   border-bottom: 1px solid #9798ad20;
 }
@@ -50,7 +68,7 @@ body {
 
 @layer base {
   body {
-    @apply dark:bg-[#141520] bg-white;
+    @apply dark:bg-[#141520] bg-[#ede8f5];
   }
 }
 
@@ -65,6 +83,7 @@ body {
   background: #6149ef;
   border: none;
   z-index: 1;
+  border-radius: 0.375rem;
 }
 .btn-15:after {
   position: absolute;
@@ -75,12 +94,8 @@ body {
   right: 0;
   z-index: -1;
   background-color: #b621fe;
-  border-radius: 10px;
+  border-radius: 0.375rem;
   transition: all 0.3s ease;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 .btn-15:hover {
   color: #fff;
@@ -94,7 +109,7 @@ body {
 }
 
 .sidebar-menu-title {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 @keyframes pulse {
@@ -105,7 +120,7 @@ body {
 
 .raise:hover,
 .raise:focus {
-  box-shadow: 0 0.5em 0.7em -0.4em #6149ef;
+  box-shadow: 0 0.5em 0.8em -0.5em #6149ef;
   transform: translateY(-0.25em);
 }
 

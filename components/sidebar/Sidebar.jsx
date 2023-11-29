@@ -10,6 +10,7 @@ import SavedActiveIcon from "../../assets/icons/saved-svgrepo-com.svg";
 import SavedIcon from "../../assets/icons/saved-svgrepo-com (1).svg";
 import PeopleActiveIcon from "../../assets/icons/users-svgrepo-com.svg";
 import PeopleIcon from "../../assets/icons/users-svgrepo-com (1).svg";
+import Title from "../Title";
 
 const items = [
   {
@@ -44,12 +45,10 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <div className="h-[100vh] w-[22%] bg-light dark:bg-[#242531] px-[50px]">
+    <div className="h-[100vh] w-[22%] bg-light dark:bg-[#242531] px-[3.125rem]">
       <SidebarUserProfile />
       <div>
-        <h3 className="mb-[18px] sidebar-menu-title text-gray dark:text-[#d6d6d6]">
-          MENU
-        </h3>
+        <Title>menu</Title>
         {items.map((item) => (
           <SidebarItem item={item} key={item.label} />
         ))}

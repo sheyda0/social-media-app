@@ -9,15 +9,14 @@ const Searchbar = () => {
     <div className="relative">
       <input
         type="text"
-        className="bg-[#f0eef4] raise dark:bg-[#242531] w-[500px] px-[20px] h-[64px] round border-none outline-none"
+        className="bg-light raise dark:bg-[#242531] w-[30rem] px-[1.25rem] medium-height round border-none outline-none"
         placeholder="Search Here..."
-        onFocus={() => setIsFucosed(true)}
       />
       <Image
         src={ExploreActiveIcon}
         width={18}
         height={18}
-        className="absolute top-[20px] right-[20px]"
+        className="absolute top-[1.4375rem] right-[1.25rem]"
         alt=""
       />
     </div>
