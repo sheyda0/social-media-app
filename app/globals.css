@@ -44,9 +44,13 @@ body {
   border-bottom: 1px solid #9798ad20;
 }
 
+.round {
+  border-radius: 10px;
+}
+
 @layer base {
   body {
-    @apply dark:bg-[#1f1f26] bg-white;
+    @apply dark:bg-[#141520] bg-white;
   }
 }
 
@@ -91,4 +95,29 @@ body {
 
 .sidebar-menu-title {
   letter-spacing: 3px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #6149ef;
+  }
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.7em -0.4em #6149ef;
+  transform: translateY(-0.25em);
+}
+
+.raise {
+  --hover: #6149ef;
+}
+
+.raise {
+  color: var(--color);
+  transition: 0.25s;
+}
+.raise:hover,
+.raise:focus {
+  border-color: #6149ef;
 }

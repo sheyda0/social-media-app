@@ -7,16 +7,10 @@ const SidebarUserProfile = () => {
   return (
     <Link
       href="/profile"
-      className="pl-[14px] pr-[20px] bg-white dark:bg-[#1f1f26] rounded-[10px] py-[14px] mb-[70px] mt-[50px] flex justify-between items-center"
+      className="pl-[14px] raise pr-[20px] text-gray bg-white dark:bg-[#141520] round py-[14px] mb-[70px] mt-[30px] flex justify-between items-center"
     >
       <div className="flex gap-[12px]">
-        <Image
-          src={Profile}
-          width={80}
-          height={80}
-          className="rounded-[10px]"
-          alt="Picture of the author"
-        />
+        <Image src={Profile} width={80} height={80} className="round" alt="" />
         <div className=" flex flex-col justify-center gap-[4px]">
           <span className="text-milky font-semibold text-[14px] capitalize">
             jackson britsons

@@ -1,17 +1,25 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { FiSun } from "react-icons/fi";
+import { IoMoonOutline } from "react-icons/io5";
 
 const ToggleDarkModeBtn = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
+  console.log(currentTheme);
+
   return (
     <button
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className="bg-gray-50 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg absolute bottom-32"
+      className="w-[64px] h-[64px] round raise bg-[#f0eef4] dark:bg-[#242531] flex items-center justify-center"
     >
-      Toggle Mode
+      {currentTheme === "dark" ? (
+        <IoMoonOutline size={24} className="text-gray dark:text-[#d6d6d6]" />
+      ) : (
+        <FiSun size={24} className="text-gray dark:text-[#d6d6d6]" />
+      )}
     </button>
   );
 };
