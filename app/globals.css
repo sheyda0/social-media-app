@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,400;1,100&display=swap");
+
+body {
+  font-family: "Actor", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  font-family: "Actor", sans-serif;
+}
+
+.bg-dark-gray {
+  background: #242531 !important;
+}
+
+.bg-darker-gray {
+  background: #1f1f26;
+}
+
+.bg-light {
+  background: #f0eef4;
+}
+
+.bg-purple {
+  background: #6149ef;
+}
+
+.text-milky {
+  color: #d6d6d6;
+}
+
+.text-dark-gray {
+  color: #242531;
+}
+
+.text-gray {
+  color: #9798ad;
+}
+
+.borderb-gray {
+  border-bottom: 1px solid #9798ad20;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-[#1f1f26] bg-white;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-btn {
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.btn-15 {
+  background: #6149ef;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #b621fe;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+
+.sidebar-menu-title {
+  letter-spacing: 3px;
 }
