@@ -25,9 +25,9 @@ const SidebarItem = ({ item }) => {
           ) : (
             <Image src={item.icon} width={20} height={20} alt="" />
           )}
-          <span>{item.label}</span>
+          <span className="hidden md:inline-block">{item.label}</span>
         </div>
-        <GoChevronRight size={20} />
+        <GoChevronRight size={20} className="hidden md:block" />
       </div>
     </Link>
   );

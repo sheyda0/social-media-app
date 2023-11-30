@@ -15,9 +15,6 @@ const Breadcrumb = () => {
   return (
     <nav className="hidden md:block w-[12.5rem]">
       <ul className="flex items-center gap-2 text-milky dark:text-[#9798ad] text-[0.875rem]">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
         {newPathSegments?.map((segment, index) => {
           const url = newPathSegments.slice(0, index + 1).join("/");
           const isActive = index === activeSegmentIndex;
@@ -29,10 +26,12 @@ const Breadcrumb = () => {
                 isActive ? "text-gray dark:text-[#d6d6d6]" : ""
               }`}
             >
-              <span className="text-[1.5rem] text-gray dark:text-[#d6d6d6]">
+              {/* <span className="text-[1.5rem] text-gray dark:text-[#d6d6d6]">
                 <GoChevronRight size={18} />
-              </span>{" "}
-              <Link href={url}>{segment}</Link>
+              </span> */}
+              <Link href={url} className="capitalize">
+                {segment}
+              </Link>
             </li>
           );
         })}

@@ -15,8 +15,8 @@ import Title from "../Title";
 const items = [
   {
     label: "Home",
-    path: "/",
-    targetSegment: null,
+    path: "/home",
+    targetSegment: "home",
     icon: HomeIcon,
     activeIcon: HomeActiveIcon,
   },
@@ -45,13 +45,17 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <div className="h-[100vh] w-[22%] bg-light dark:bg-[#242531] px-[3.125rem]">
-      <SidebarUserProfile />
+    <div className="h-[10rem] w-full md:h-[100vh] md:w-[22%] bg-light dark:bg-[#242531] px-[3.125rem]">
+      <div className="hidden md:block">
+        <SidebarUserProfile />
+      </div>
       <div>
-        <Title>menu</Title>
-        {items.map((item) => (
-          <SidebarItem item={item} key={item.label} />
-        ))}
+        <Title cln="hidden md:block">menu</Title>
+        <div className="flex md:block w-full justify-between">
+          {items.map((item) => (
+            <SidebarItem item={item} key={item.label} />
+          ))}
+        </div>
       </div>
     </div>
   );

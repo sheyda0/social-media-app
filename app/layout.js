@@ -1,9 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
-import Sidebar from "@/components/sidebar/Sidebar";
-import Header from "@/components/header/Header";
-import RightSidebar from "@/components/right_sidebar/RightSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,16 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          <div className="flex w-full h-full justify-between">
-            <Sidebar />
-            <div className="flex flex-col px-[1.875rem] w-[60%]">
-              <Header />
-              <div>{children}</div>
-            </div>
-            <RightSidebar />
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
