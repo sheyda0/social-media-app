@@ -28,7 +28,9 @@ const FollowSuggestItem = () => {
           </span>
         </div>
       </div>
-      <PrimaryButton>Follow</PrimaryButton>
+      <PrimaryButton cln="text-[0.75rem] px-[0.875rem] py-[0.2rem] rounded-[0.375rem] btn-15-sm-round">
+        Follow
+      </PrimaryButton>
     </div>
   );
 };

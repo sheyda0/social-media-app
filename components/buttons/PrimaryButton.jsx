@@ -1,6 +1,8 @@
-const PrimaryButton = ({ children }) => {
+const PrimaryButton = ({ children, cln }) => {
   return (
-    <button class="custom-btn btn-15 px-[0.875rem] py-[0.2rem] rounded-md font-semibold text-[0.75rem] text-milky">
+    <button
+      className={`${cln} custom-btn btn-15 rounded-md font-semibold text-milky`}
+    >
       {children}
     </button>
   );
