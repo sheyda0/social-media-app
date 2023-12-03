@@ -50,8 +50,8 @@ const Login = () => {
   };
 
   return (
-    <div class="form sign-in flex flex-col justify-center items-center w-[85vw] md:w-[70vw]">
-      <div className="flex flex-col">
+    <div class="form sign-in flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
+      <div className="flex flex-col w-[75vw] md:w-[30rem]">
         <RegisterFormTitle title="Welcome back" sub="Sign in to your account" />
         <div className="flex flex-col gap-[1.5rem]">
           <SocialLoginButton
@@ -68,7 +68,7 @@ const Login = () => {
           <Input
             placeholder="Email or Username"
             type="text"
-            cln="mb-[1.5rem] w-[23rem]"
+            cln="mb-[1.5rem] w-full"
             value={username}
             onChange={handleUsernameInput}
             required={true}
@@ -76,7 +76,7 @@ const Login = () => {
           <Input
             placeholder="Password"
             type="password"
-            cln="mb-[1.5rem] w-[23rem]"
+            cln="mb-[1.5rem] w-full"
             value={password}
             onChange={handlePasswordInput}
             required={true}

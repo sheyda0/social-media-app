@@ -41,13 +41,17 @@ const SignUp = () => {
   };
 
   return (
-    <div class="form sign-up flex flex-col justify-center items-center w-[85vw] md:w-[70vw]">
-      <form action="" className="flex flex-col" onSubmit={handleSubmit}>
+    <div class="form sign-up flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
+      <form
+        action=""
+        className="flex flex-col w-[75vw] md:w-[30rem]"
+        onSubmit={handleSubmit}
+      >
         <RegisterFormTitle title="Get started" sub="Create a new account" />
         <Input
           placeholder="Username"
           type="text"
-          cln="mb-[1.5rem] w-[35rem]"
+          cln="mb-[1.5rem] w-full"
           value={username}
           onChange={handleUsernameInput}
           required={true}
@@ -55,7 +59,7 @@ const SignUp = () => {
         <Input
           placeholder="Email"
           type="text"
-          cln="mb-[1.5rem] w-[35rem]"
+          cln="mb-[1.5rem] w-full"
           value={email}
           onChange={handleEmailInput}
           required={true}
@@ -63,7 +67,7 @@ const SignUp = () => {
         <Input
           placeholder="Password"
           type="password"
-          cln="mb-[1.5rem] w-[35rem]"
+          cln="mb-[1.5rem] w-full"
           value={password}
           onChange={handlePasswordInput}
           required={true}
