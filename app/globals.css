@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,400;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Alkatra&family=Montserrat:ital,wght@0,400;1,100&display=swap");
 
 @media screen and (max-width: 1710px) {
   * {
@@ -43,6 +44,10 @@ body {
 
 * {
   font-family: "Actor", sans-serif;
+}
+
+.logo {
+  font-family: "Actor" !important;
 }
 
 .medium-height {

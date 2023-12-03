@@ -11,6 +11,7 @@ import SavedIcon from "../../assets/icons/saved-svgrepo-com (1).svg";
 import PeopleActiveIcon from "../../assets/icons/users-svgrepo-com.svg";
 import PeopleIcon from "../../assets/icons/users-svgrepo-com (1).svg";
 import Title from "../Title";
+import Logo from "./Logo";
 
 const items = [
   {
@@ -46,6 +47,7 @@ const items = [
 const Sidebar = () => {
   return (
     <div className="h-[10rem] w-full md:h-[100vh] md:w-[22%] bg-light dark:bg-[#242531] px-[3.125rem]">
+      {/* <Logo /> */}
       <div className="hidden md:block">
         <SidebarUserProfile />
       </div>
