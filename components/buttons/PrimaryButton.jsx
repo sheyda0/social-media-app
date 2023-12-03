@@ -1,8 +1,6 @@
 const PrimaryButton = ({ children, cln }) => {
   return (
-    <button
-      className={`${cln} custom-btn btn-15 rounded-md font-semibold text-milky`}
-    >
+    <button className={`${cln} rounded-md font-semibold text-milky bg-purple`}>
       {children}
     </button>
   );

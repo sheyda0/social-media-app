@@ -10,12 +10,12 @@ const SidebarItem = ({ item }) => {
   return (
     <Link
       href={item.path}
-      className={`px-[1.25rem] block round ${
+      className={`px-[1.25rem] round medium-height flex items-center ${
         isActive ? "bg-purple text-milky font-semibold" : "text-gray"
       }`}
     >
       <div
-        className={`flex items-center justify-between w-full h-full py-[1.25rem] ${
+        className={`flex items-center justify-between w-full h-full${
           !isActive && "borderb-gray"
         }`}
       >

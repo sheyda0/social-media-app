@@ -10,6 +10,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .img__btn {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+}
+
 body {
   font-family: "Actor", sans-serif;
 }
@@ -19,7 +29,11 @@ body {
 }
 
 .medium-height {
-  height: 4rem;
+  height: 3.7rem;
+}
+
+.medium-width {
+  width: 3.7rem;
 }
 
 .bg-dark-gray {
@@ -51,7 +65,7 @@ body {
 }
 
 .text-gray {
-  color: #9798ad;
+  color: #9798ad !important;
 }
 
 .text-purple {
@@ -150,7 +164,6 @@ body {
 
 .form {
   position: relative;
-  width: 70vw;
   height: 100%;
   transition: transform 1.2s ease-in-out;
 }
@@ -160,10 +173,7 @@ body {
 .sub-cont {
   overflow: hidden;
   position: absolute;
-  left: 60vw;
   top: 0;
-  width: 100vw;
-  height: 100vh;
   background: #141520;
   transition: transform 1.2s ease-in-out;
 }
@@ -181,7 +191,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 40vw;
   height: 100%;
   padding-top: 360px;
 }

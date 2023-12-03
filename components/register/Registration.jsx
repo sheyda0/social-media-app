@@ -19,7 +19,7 @@ const Registration = () => {
         } overflow-hidden relative w-[100vw] h-[100vh] bg-[#141520]`}
       >
         <Login />
-        <div class="sub-cont">
+        <div class="sub-cont left-[85vw] md:left-[60vw] w-[100vw] h-[100vh]">
           <RegistrationSidebar onClick={handleShowSignUp} />
           <SignUp />
         </div>

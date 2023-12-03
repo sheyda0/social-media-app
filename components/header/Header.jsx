@@ -15,7 +15,7 @@ const Header = () => {
         <HeaderItem
           icon={
             <IoMdNotificationsOutline
-              size={24}
+              size={22}
               className="text-gray dark:text-[#d6d6d6]"
             />
           }
@@ -25,7 +25,7 @@ const Header = () => {
         <HeaderItem
           icon={
             <AiOutlineMessage
-              size={24}
+              size={22}
               className="text-gray dark:text-[#d6d6d6]"
             />
           }
