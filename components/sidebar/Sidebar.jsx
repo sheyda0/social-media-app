@@ -11,7 +11,6 @@ import SavedIcon from "../../assets/icons/saved-svgrepo-com (1).svg";
 import PeopleActiveIcon from "../../assets/icons/users-svgrepo-com.svg";
 import PeopleIcon from "../../assets/icons/users-svgrepo-com (1).svg";
 import Title from "../Title";
-import Logo from "./Logo";
 
 const items = [
   {

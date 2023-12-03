@@ -1,7 +1,7 @@
 import SocialLogin from "@/components/SocialLogin";
 
 const page = () => {
-  return <SocialLogin />;
+  return <div>hi</div>;
 };
 
 export default page;
