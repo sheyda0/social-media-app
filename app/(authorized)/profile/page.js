@@ -1,7 +1,11 @@
-import SocialLogin from "@/components/SocialLogin";
+import Profile from "@/components/profile/Profile";
 
 const page = () => {
-  return <SocialLogin />;
+  return (
+    <>
+      <Profile />
+    </>
+  );
 };
 
 export default page;

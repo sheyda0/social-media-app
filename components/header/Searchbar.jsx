@@ -8,7 +8,11 @@ import Input from "../Input";
 const Searchbar = () => {
   return (
     <div className="relative">
-      <Input type="text" placeholder="Search Here..." />
+      <Input
+        type="text"
+        placeholder="Search Here..."
+        cln="w-[18rem] md:w-[30rem]"
+      />
       <Image
         src={ExploreActiveIcon}
         width={18}

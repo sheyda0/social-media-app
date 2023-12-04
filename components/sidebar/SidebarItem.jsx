@@ -15,15 +15,17 @@ const SidebarItem = ({ item }) => {
       }`}
     >
       <div
-        className={`flex items-center justify-between w-full h-full${
+        className={`flex items-center justify-between w-full h-full ${
           !isActive && "borderb-gray"
         }`}
       >
         <div className="flex items-center gap-[0.625rem]">
-          {isActive ? (
+          {isActive && item.icon ? (
             <Image src={item.activeIcon} width={20} height={20} alt="" />
-          ) : (
+          ) : !isActive && item.icon ? (
             <Image src={item.icon} width={20} height={20} alt="" />
+          ) : (
+            <div></div>
           )}
           <span className="hidden md:inline-block">{item.label}</span>
         </div>

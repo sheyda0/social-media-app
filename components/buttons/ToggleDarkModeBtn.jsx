@@ -11,7 +11,7 @@ const ToggleDarkModeBtn = () => {
   return (
     <button
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className="medium-width medium-height round raise bg-light dark:bg-[#242531] flex items-center justify-center"
+      className="md:medium-width medium-height round raise md:bg-light md:dark:bg-[#242531] flex items-center justify-center"
     >
       {currentTheme === "dark" ? (
         <IoMoonOutline size={22} className="text-gray dark:text-[#d6d6d6]" />

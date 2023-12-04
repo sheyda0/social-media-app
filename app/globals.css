@@ -38,6 +38,12 @@
   }
 }
 
+@layer base {
+  body {
+    @apply dark:bg-[#141520] bg-[#ede8f5];
+  }
+}
+
 body {
   font-family: "Actor", sans-serif;
 }
@@ -78,6 +84,10 @@ body {
   background: #6149ef;
 }
 
+.bg-pink {
+  background: #b621fe;
+}
+
 .text-milky {
   color: #d6d6d6;
 }
@@ -87,7 +97,7 @@ body {
 }
 
 .text-gray {
-  color: #9798ad !important;
+  color: #9798ad;
 }
 
 .text-purple {
@@ -95,21 +105,19 @@ body {
 }
 
 .border-gray {
-  border: 1px solid #9798ad20;
+  border: 0.2px solid #9798ad20;
 }
 
 .borderb-gray {
   border-bottom: 1px solid #9798ad20;
 }
 
-.round {
-  border-radius: 10px;
+.purple-shadow {
+  box-shadow: 0 0.5em 0.8em -0.5em #6149ef;
 }
 
-@layer base {
-  body {
-    @apply dark:bg-[#141520] bg-[#ede8f5];
-  }
+.round {
+  border-radius: 10px;
 }
 
 .custom-btn {

@@ -10,7 +10,7 @@ const Header = () => {
     <div className="mt-[1.875rem] flex items-center justify-between w-full">
       <Breadcrumb />
       <Searchbar />
-      <div className="flex gap-[0.75rem]">
+      <div className="flex gap-[1rem] md:gap-[0.75rem] ml-[1rem] md:m-0">
         <ToggleDarkModeBtn />
         <HeaderItem
           icon={
