@@ -3,7 +3,7 @@ import FollowerItem from "@/components/followers/FollowerItem";
 
 const page = () => {
   return (
-    <MainContainer cln="h-[80vh]">
+    <MainContainer cln="max-h-[80vh]">
       <FollowerItem />
       <FollowerItem />
       <FollowerItem />

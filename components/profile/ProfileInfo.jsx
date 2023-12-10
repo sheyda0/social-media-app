@@ -4,7 +4,7 @@ import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jp
 const ProfileInfo = () => {
   return (
     <div className="mt-[3rem] w-1/2">
-      <div className="flex gap-[2rem]">
+      <div className="flex flex-col md:flex-row gap-[2rem]">
         <button className="rounded-full">
           <Image
             src={ProfileImage}

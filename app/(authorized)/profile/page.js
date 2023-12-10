@@ -1,3 +1,4 @@
+import Modal from "@/components/Modal";
 import Profile from "@/components/profile/Profile";
 
 const page = () => {

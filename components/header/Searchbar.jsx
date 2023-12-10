@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import ExploreActiveIcon from "../../assets/icons/search-svgrepo-com (2).svg";
-import { useState } from "react";
 import Input from "../Input";
 
 const Searchbar = () => {
@@ -11,7 +10,7 @@ const Searchbar = () => {
       <Input
         type="text"
         placeholder="Search Here..."
-        cln="w-[18rem] md:w-[30rem]"
+        cln="w-[17rem] md:w-[30rem] "
       />
       <Image
         src={ExploreActiveIcon}

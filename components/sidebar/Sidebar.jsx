@@ -10,45 +10,12 @@ import SavedActiveIcon from "../../assets/icons/saved-svgrepo-com.svg";
 import SavedIcon from "../../assets/icons/saved-svgrepo-com (1).svg";
 import PeopleActiveIcon from "../../assets/icons/users-svgrepo-com.svg";
 import PeopleIcon from "../../assets/icons/users-svgrepo-com (1).svg";
+import bellActiveIcon from "../../assets/icons/notification-bell-svgrepo-com.svg";
+import bellIcon from "../../assets/icons/notification-bell-svgrepo-com (1).svg";
+
 import Title from "../Title";
 import { FaPlus } from "react-icons/fa6";
-import { BsPlusCircleFill } from "react-icons/bs";
-
-const items = [
-  {
-    label: "Home",
-    path: "/home",
-    targetSegment: "home",
-    icon: HomeIcon,
-    activeIcon: HomeActiveIcon,
-  },
-  {
-    label: "Explore",
-    path: "/explore",
-    targetSegment: "explore",
-    icon: ExploreIcon,
-    activeIcon: ExploreActiveIcon,
-  },
-  {
-    label: "",
-    path: "/",
-    targetSegment: "",
-  },
-  {
-    label: "People",
-    path: "/people",
-    targetSegment: "people",
-    icon: PeopleIcon,
-    activeIcon: PeopleActiveIcon,
-  },
-  {
-    label: "Saved",
-    path: "/saved",
-    targetSegment: "saved",
-    icon: SavedIcon,
-    activeIcon: SavedActiveIcon,
-  },
-];
+import { isMobile } from "react-device-detect";
 
 const Sidebar = () => {
   return (
@@ -61,14 +28,48 @@ const Sidebar = () => {
       <div className="w-full">
         <Title cln="hidden md:block">menu</Title>
         <div className="flex md:block w-full justify-between">
-          {items.map((item) => (
-            <SidebarItem item={item} key={item.label} />
-          ))}
+          <SidebarItem
+            path="/home"
+            targetSegment="home"
+            icon={HomeIcon}
+            activeIcon={HomeActiveIcon}
+            label="Home"
+          />
+          <SidebarItem
+            path="/people"
+            targetSegment="people"
+            icon={PeopleIcon}
+            activeIcon={PeopleActiveIcon}
+            label="People"
+          />
+          <div className="w-[3rem] bg-dark-gray flex items-center justify-center rounded-full md:hidden">
+            <FaPlus color="#9798ad" size={24} />
+          </div>
+          {isMobile ? (
+            <SidebarItem
+              path="/notifications"
+              targetSegment="notifications"
+              icon={bellIcon}
+              activeIcon={bellActiveIcon}
+              label="Notifications"
+            />
+          ) : (
+            <SidebarItem
+              path="/saved"
+              targetSegment="saved"
+              icon={SavedIcon}
+              activeIcon={SavedActiveIcon}
+              label="Saved"
+            />
+          )}
+          <SidebarItem
+            path="/explore"
+            targetSegment="explore"
+            icon={ExploreIcon}
+            activeIcon={ExploreActiveIcon}
+            label="Explore"
+          />
         </div>
-      </div>
-
-      <div className="w-[3rem] bg-dark-gray flex items-center justify-center rounded-full absolute left-[45%] top-[1.4rem] md:hidden">
-        <FaPlus color="#9798ad" size={24} />
       </div>
     </div>
   );

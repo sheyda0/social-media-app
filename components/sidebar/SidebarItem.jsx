@@ -3,13 +3,13 @@ import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 
-const SidebarItem = ({ item }) => {
+const SidebarItem = ({ path, targetSegment, icon, activeIcon, label }) => {
   const activeSegment = useSelectedLayoutSegment();
-  const isActive = activeSegment === item.targetSegment;
+  const isActive = activeSegment === targetSegment;
 
   return (
     <Link
-      href={item.path}
+      href={path}
       className={`px-[1.25rem] round medium-height flex items-center ${
         isActive ? "bg-purple text-milky font-semibold" : "text-gray"
       }`}
@@ -20,14 +20,14 @@ const SidebarItem = ({ item }) => {
         }`}
       >
         <div className="flex items-center gap-[0.625rem]">
-          {isActive && item.icon ? (
-            <Image src={item.activeIcon} width={20} height={20} alt="" />
-          ) : !isActive && item.icon ? (
-            <Image src={item.icon} width={20} height={20} alt="" />
+          {isActive && icon ? (
+            <Image src={activeIcon} width={20} height={20} alt="" />
+          ) : !isActive && icon ? (
+            <Image src={icon} width={20} height={20} alt="" />
           ) : (
             <div></div>
           )}
-          <span className="hidden md:inline-block">{item.label}</span>
+          <span className="hidden md:inline-block">{label}</span>
         </div>
         <GoChevronRight size={20} className="hidden md:block" />
       </div>

@@ -4,15 +4,18 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { AiOutlineMessage } from "react-icons/ai";
 import ToggleDarkModeBtn from "../buttons/ToggleDarkModeBtn";
 import Breadcrumb from "../Breadcrumb";
+import MobileHeaderProfile from "./MobileHeaderProfile";
 
 const Header = () => {
   return (
-    <div className="mt-[1.875rem] flex items-center justify-between w-full">
+    <div className="mt-[1rem] md:mt-[1.875rem] flex items-center justify-between w-full">
       <Breadcrumb />
+      <MobileHeaderProfile />
       <Searchbar />
       <div className="flex gap-[1rem] md:gap-[0.75rem] ml-[1rem] md:m-0">
         <ToggleDarkModeBtn />
         <HeaderItem
+          cln="hidden md:flex"
           icon={
             <IoMdNotificationsOutline
               size={22}
@@ -20,7 +23,7 @@ const Header = () => {
             />
           }
           notif={true}
-          url="/nofications"
+          url="/notifications"
         />
         <HeaderItem
           icon={
