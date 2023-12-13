@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Modal from "../Modal";
 import EditProfile from "./EditProfile";
+import Post from "../post/Post";
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,14 +17,14 @@ const Profile = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col items-center hide-scrollbar h-[52rem] mt-[3rem]">
       <div className="flex items-center justify-between w-full">
         <ProfileInfo />
-        <div className="flex flex-col h-full w-1/2 justify-center items-center gap-[2rem] pr-[3rem]">
+        <div className="flex flex-col w-1/2 justify-center items-center gap-[2rem] pr-[3rem]">
           <button className="w-full flex justify-end">
             <BiMessageSquareEdit
               size={24}
-              color="#d6d6d6"
+              className="text-[#9798AD] dark:text-[#d6d6d6]"
               onClick={handleShowModal}
             />
           </button>
@@ -34,8 +35,13 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      {/* posts */}
+      <div className="flex flex-col items-center w-full mt-[3rem] gap-[1rem]">
+        <Post />
+        <Post />
+      </div>
       {showModal && <EditProfile closeModal={handleShowModal} />}
-    </>
+    </div>
   );
 };
 

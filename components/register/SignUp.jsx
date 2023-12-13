@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Input from "../Input";
+import Input from "../inputs/Input";
 import PrimaryButton from "../buttons/PrimaryButton";
 import RegisterFormTitle from "./RegisterFormTitle";
 import { useDispatch } from "react-redux";

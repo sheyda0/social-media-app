@@ -1,5 +1,34 @@
+"use client";
+
+import { useState } from "react";
+import PostAddComment from "./PostAddComment";
+import PostCaption from "./PostCaption";
+import PostComments from "./PostComments";
+import PostFooter from "./PostFooter";
+import PostImage from "./PostImage";
+import PostUserProfile from "./PostUserProfile";
+
 const Post = () => {
-  return <div>Enter</div>;
+  const [showComments, setShowComments] = useState(false);
+
+  const handleShowComments = () => {
+    setShowComments((showComments) => true);
+  };
+
+  return (
+    <div className="bg-light dark:bg-[#242531] w-[70%] round p-[1.5rem] pb-[1rem]">
+      <PostUserProfile />
+      <PostCaption />
+      <PostImage />
+      <PostFooter handleShowComments={handleShowComments} />
+      {showComments && (
+        <div>
+          <PostAddComment />
+          <PostComments />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Post;

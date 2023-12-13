@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
-import Input from "../Input";
+import Input from "../inputs/Input";
 import SeparatorWithText from "../SeparatorWithText";
 import RegisterFormTitle from "./RegisterFormTitle";
 import SocialLoginButton from "./SocialLoginButton";

@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
-import { GoChevronRight } from "react-icons/go";
 import Link from "next/link";
-import Separator from "../Separator";
-import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryBorderedBtn from "../buttons/SecondaryBorderedBtn";
 import SecondaryButton from "../buttons/SecondaryButton";
 

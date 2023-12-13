@@ -19,7 +19,7 @@ const FollowSuggestItem = () => {
         <div className=" flex flex-col justify-center gap-[0.25rem]">
           <Link
             href="/"
-            className="text-gray dark:text-[#d6d6d6] font-semibold text-[0.875rem] capitalize"
+            className="text-dark-gray dark:text-[#d6d6d6] font-semibold text-[0.875rem] capitalize"
           >
             jackson britsons
           </Link>

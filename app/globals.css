@@ -52,6 +52,16 @@ body {
   font-family: "Actor", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
 .logo {
   font-family: "Actor" !important;
 }
@@ -93,7 +103,7 @@ body {
 }
 
 .text-dark-gray {
-  color: #242531;
+  color: #444444;
 }
 
 .text-gray {

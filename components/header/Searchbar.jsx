@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import ExploreActiveIcon from "../../assets/icons/search-svgrepo-com (2).svg";
-import Input from "../Input";
+import Input from "../inputs/Input";
 
 const Searchbar = () => {
   return (

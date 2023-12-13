@@ -12,7 +12,7 @@ const SidebarUserProfile = () => {
       <div className="flex gap-[0.75rem]">
         <Image src={Profile} width={55} height={55} className="round" alt="" />
         <div className=" flex flex-col justify-center gap-[0.25rem]">
-          <span className="text-gray dark:text-[#d6d6d6] font-semibold text-[0.875rem] capitalize">
+          <span className="text-dark-gray dark:text-[#d6d6d6] font-semibold text-[0.875rem] capitalize">
             jackson britsons
           </span>
           <span className="text-gray font-semibold text-[0.75rem] capitalize">
