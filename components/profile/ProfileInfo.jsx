@@ -13,7 +13,7 @@ const ProfileInfo = ({ handleShowModal }) => {
         />
       )}
       <div className="flex w-full gap-[2rem]">
-        <button className="rounded-full relative w-[7rem] h-[7rem]">
+        <button className="rounded-full relative w-[7rem] md:w-[11rem] h-[7rem] md:h-[11rem]">
           <Image
             src={ProfileImage}
             fill
