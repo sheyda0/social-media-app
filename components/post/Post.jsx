@@ -16,7 +16,7 @@ const Post = () => {
   };
 
   return (
-    <div className="bg-light dark:bg-[#242531] w-[70%] round p-[1.5rem] pb-[1rem]">
+    <div className="bg-light dark:bg-[#242531] w-full md:w-[70%] round p-[0.7rem] md:p-[1.5rem] pb-[1rem]">
       <PostUserProfile />
       <PostCaption />
       <PostImage />

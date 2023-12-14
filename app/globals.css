@@ -40,7 +40,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-[#141520] bg-[#ede8f5];
+    @apply dark:bg-[#141520] bg-[#f0e8f8];
   }
 }
 
@@ -74,6 +74,14 @@ body {
   width: 3.7rem;
 }
 
+.bg-light-gray {
+  background: #f2f2f2;
+}
+
+.bg-lighter-gray {
+  background: #e3e3e3;
+}
+
 .bg-dark-gray {
   background: #242531 !important;
 }
@@ -83,7 +91,7 @@ body {
 }
 
 .bg-light-white {
-  background: #ede8f5;
+  background: #f0e8f8;
 }
 
 .bg-light {
@@ -128,6 +136,15 @@ body {
 
 .round {
   border-radius: 10px;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.light-gray-hover:hover {
+  background: #41414b;
+  transition: 0.1s all ease-in-out;
 }
 
 .custom-btn {

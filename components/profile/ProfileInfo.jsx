@@ -1,25 +1,33 @@
 import Image from "next/image";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
+import EditProfileButton from "./EditProfileButton";
+import { isMobile } from "react-device-detect";
 
-const ProfileInfo = () => {
+const ProfileInfo = ({ handleShowModal }) => {
   return (
-    <div className="w-1/2">
-      <div className="flex flex-col md:flex-row gap-[2rem]">
-        <button className="rounded-full">
+    <div className="w-full md:w-1/2 relative">
+      {isMobile && (
+        <EditProfileButton
+          onClick={handleShowModal}
+          cln="absolute right-0 top-[1rem]"
+        />
+      )}
+      <div className="flex w-full gap-[2rem]">
+        <button className="rounded-full relative w-[7rem] h-[7rem]">
           <Image
             src={ProfileImage}
-            width={160}
-            height={160}
-            className="rounded-full"
+            fill
+            className="rounded-full object-cover w-full h-full"
             alt=""
           />
         </button>
+
         <div className="flex justify-center flex-col ">
           <h3 className="capitalize text-[1.6rem] text-dark-gray dark:text-[#d6d6d6] font-semibold">
             isak danielson
           </h3>
           <span className="text-gray text-[1.125rem]">@isak</span>
-          <p className="text-dark-gray text-[1.125rem] dark:text-[#d6d6d6] mt-[1.5rem]">
+          <p className="text-dark-gray text-[1.125rem] dark:text-[#d6d6d6] mt-[0.5rem] md:mt-[1.5rem]">
             this is gonna be a bio for my profile.
           </p>
         </div>

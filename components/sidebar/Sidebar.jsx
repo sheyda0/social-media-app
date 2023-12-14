@@ -12,7 +12,6 @@ import PeopleActiveIcon from "../../assets/icons/users-svgrepo-com.svg";
 import PeopleIcon from "../../assets/icons/users-svgrepo-com (1).svg";
 import bellActiveIcon from "../../assets/icons/notification-bell-svgrepo-com.svg";
 import bellIcon from "../../assets/icons/notification-bell-svgrepo-com (1).svg";
-
 import Title from "../Title";
 import { FaPlus } from "react-icons/fa6";
 import { isMobile } from "react-device-detect";

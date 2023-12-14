@@ -9,7 +9,7 @@ const SecondaryInput = ({
   return (
     <input
       type={type}
-      className={`${cln} text-gray w-full bg-transparent border-gray px-[1.25rem] medium-height round border-none outline-none font-semibold`}
+      className={`${cln} text-gray w-full bg-transparent border border-[#9798ad] px-[1.25rem] round focus:border-[2px] transition-all outline-none font-semibold`}
       placeholder={placeholder}
       value={value}
       onChange={onChange}

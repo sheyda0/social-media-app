@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
+import Username from "../Username";
 
 const PostUserProfile = () => {
   return (
@@ -12,9 +13,7 @@ const PostUserProfile = () => {
         alt=""
       />
       <div className="mt-[1rem]">
-        <h3 className="capitalize font-bold text-[1.125rem] text-dark-gray dark:text-[#d6d6d6]">
-          tom odell
-        </h3>
+        <Username>tom odell</Username>
         <span className="text-gray font-semibold text-[0.75rem] capitalize">
           5 minutes ago
         </span>
