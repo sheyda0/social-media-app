@@ -18,7 +18,7 @@ import { isMobile } from "react-device-detect";
 
 const Sidebar = () => {
   return (
-    <div className="h-[5rem] relative rounded-t-[1rem] md:rounded-none flex items-center justify-between md:block w-full md:h-[100vh] md:w-[22%] bg-light dark:bg-[#242531] px-[2rem] md:px-[3.125rem]">
+    <div className="h-[5rem] md:relative rounded-t-[1rem] md:rounded-none flex items-center justify-between md:block w-full md:h-[100vh] md:w-[22%] bg-light dark:bg-[#242531] px-[2rem] md:px-[3.125rem] fixed left-0 bottom-0 z-50">
       {/* <Logo /> */}
       <div className="hidden md:block">
         <SidebarUserProfile />
