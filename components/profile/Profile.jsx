@@ -7,6 +7,8 @@ import EditProfile from "./EditProfile";
 import Post from "../post/Post";
 import EditProfileButton from "./EditProfileButton";
 import { isMobile } from "react-device-detect";
+import MainContainer from "../containers/MainContainer";
+import PostsContainer from "../containers/PostsContainer";
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +18,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex flex-col items-center overflow-y-scroll h-[52rem] mt-[3rem]">
+    <MainContainer cln="pb-[2rem]">
       <div className="flex flex-col md:flex-row items-center justify-between w-full">
         <ProfileInfo handleShowModal={handleShowModal} />
         <div className="flex flex-col w-full md:w-1/2 justify-between md:justify-center items-center gap-[2rem] md:pr-[3rem]">
@@ -29,12 +31,12 @@ const Profile = () => {
         </div>
       </div>
       {/* posts */}
-      <div className="flex flex-col items-center w-full mt-[3rem] gap-[1rem]">
+      <PostsContainer>
         <Post />
         <Post />
-      </div>
+      </PostsContainer>
       {showModal && <EditProfile closeModal={handleShowModal} />}
-    </div>
+    </MainContainer>
   );
 };
 

@@ -1,9 +1,9 @@
-import MainContainer from "@/components/MainContainer";
+import MainContainer from "@/components/containers/MainContainer";
 import FollowerItem from "@/components/followers/FollowerItem";
 
 const page = () => {
   return (
-    <MainContainer cln="max-h-[80vh]">
+    <MainContainer cln="px-[5rem]">
       <FollowerItem />
       <FollowerItem />
       <FollowerItem />

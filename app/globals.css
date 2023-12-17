@@ -36,6 +36,18 @@
   .form.sign-up {
     width: 35vw !important;
   }
+  .no-raise:hover,
+  .no-raise:focus {
+    box-shadow: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+  }
+  .container-height {
+    height: calc(100vh - 10.9rem) !important;
+  }
 }
 
 @layer base {
@@ -209,7 +221,6 @@ body {
 }
 
 .raise {
-  color: var(--color);
   transition: 0.25s;
 }
 .raise:hover,
@@ -370,4 +381,8 @@ body {
   -moz-transform: translate3d(40vw, 0, 0);
   -ms-transform: translate3d(40vw, 0, 0);
   -o-transform: translate3d(40vw, 0, 0);
+}
+
+.container-height {
+  height: calc(100vh - 8.6rem);
 }

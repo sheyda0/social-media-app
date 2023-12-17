@@ -1,3 +1,5 @@
+"use client";
+
 const SecondaryInput = ({
   type,
   cln,
@@ -5,6 +7,7 @@ const SecondaryInput = ({
   value,
   onChange,
   required,
+  autoFocus,
 }) => {
   return (
     <input
@@ -14,6 +17,7 @@ const SecondaryInput = ({
       value={value}
       onChange={onChange}
       required={required}
+      autoFocus={autoFocus}
     />
   );
 };

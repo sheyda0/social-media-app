@@ -1,5 +1,7 @@
+import Home from "@/components/home/Home";
+
 const page = () => {
-  return <div>home</div>;
+  return <Home />;
 };
 
 export default page;

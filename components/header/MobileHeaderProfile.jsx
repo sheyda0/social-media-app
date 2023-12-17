@@ -6,15 +6,9 @@ const MobileHeaderProfile = () => {
   return (
     <Link
       href="/profile"
-      className="w-[3.7rem] h-[3.7rem] mr-[1rem] items-center justify-center flex md:hidden"
+      className="min-w-[3.7rem] h-[3.7rem] mr-[1rem] items-center justify-center flex md:hidden relative"
     >
-      <Image
-        src={ProfileImage}
-        width={60}
-        height={60}
-        className="rounded-full"
-        alt=""
-      />
+      <Image src={ProfileImage} fill className="rounded-full" alt="" />
     </Link>
   );
 };

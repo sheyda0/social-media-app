@@ -3,7 +3,7 @@ import PostSingleComment from "./PostSingleComment";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import ProfileImage2 from "../../assets/images/handsome-confident-smiling-man-with-hands-crossed-chest.jpg";
 import ProfileImage3 from "../../assets/images/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg";
-import { comment } from "postcss";
+import PostAddComment from "./PostAddComment";
 
 const comments = [
   {
@@ -50,10 +50,12 @@ const comments = [
 ];
 
 const PostComments = () => {
-  const [showReply, setShowReply] = useState(false);
+  const [showReplyInput, setShowReplyInput] = useState(false);
+  const [selectedCommentId, setSelectedCommentId] = useState(null);
 
-  const handleShowReply = () => {
-    setShowReply(true);
+  const handleShowReplyInput = (id) => {
+    setShowReplyInput(true);
+    setSelectedCommentId(id);
   };
 
   return (
@@ -64,8 +66,8 @@ const PostComments = () => {
       {comments?.map((comment) => (
         <div key={comment.id}>
           <PostSingleComment
-            showReply={showReply}
-            handleShowReply={handleShowReply}
+            showReplyInput={showReplyInput}
+            handleShowReplyInput={() => handleShowReplyInput(comment.id)}
             username={comment.username}
             userProfile={comment.user_image}
             content={comment.content}
@@ -74,8 +76,8 @@ const PostComments = () => {
           {comment.replies.map((rep) => (
             <PostSingleComment
               key={rep.id}
-              showReply={showReply}
-              handleShowReply={handleShowReply}
+              showReplyInput={showReplyInput}
+              handleShowReplyInput={() => handleShowReplyInput(rep.id)}
               isReply={true}
               cln="ml-[4rem]"
               username={rep.username}
@@ -83,6 +85,7 @@ const PostComments = () => {
               content={rep.content}
             />
           ))}
+          {showReplyInput && <PostAddComment cln="mb-[1.5rem] ml-[4rem]" />}
         </div>
       ))}
     </div>

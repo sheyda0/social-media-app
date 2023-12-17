@@ -5,7 +5,7 @@ import SecondaryInput from "../inputs/SecondaryInput";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import { useState } from "react";
 
-const PostAddComment = () => {
+const PostAddComment = ({ cln }) => {
   const [comment, setComment] = useState("");
 
   const handleCommentChange = (e) => {
@@ -17,7 +17,9 @@ const PostAddComment = () => {
   };
 
   return (
-    <div className="w-full mt-[1rem] flex items-center gap-[0.5rem]">
+    <div
+      className={`${cln ? cln : ""} mt-[1rem] flex items-center gap-[0.5rem]`}
+    >
       <div>
         <Image
           src={ProfileImage}
@@ -42,6 +44,7 @@ const PostAddComment = () => {
           cln="h-[3.5rem]"
           value={comment}
           onChange={handleCommentChange}
+          autoFocus={true}
         />
       </div>
     </div>

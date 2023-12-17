@@ -10,7 +10,7 @@ const Searchbar = () => {
       <Input
         type="text"
         placeholder="Search Here..."
-        cln="md:w-[30rem] w-[18rem]"
+        cln="md:w-[30rem] w-[16rem]"
       />
       <Image
         src={ExploreActiveIcon}

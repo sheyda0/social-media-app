@@ -12,7 +12,7 @@ const Post = () => {
   const [showComments, setShowComments] = useState(false);
 
   const handleShowComments = () => {
-    setShowComments((showComments) => true);
+    setShowComments(true);
   };
 
   return (

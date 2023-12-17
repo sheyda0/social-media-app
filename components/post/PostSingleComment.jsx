@@ -1,6 +1,5 @@
-import Image from "next/image";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Username from "../Username";
+import SmallProfileImage from "../SmallProfileImage";
 
 const PostSingleComment = ({
   cln,
@@ -8,18 +7,12 @@ const PostSingleComment = ({
   username,
   userProfile,
   content,
+  handleShowReplyInput,
 }) => {
   return (
     <div className={`${cln} mt-[1rem] flex gap-[0.5rem]`}>
       {/* user profile */}
-      <div className="min-w-[3.5rem] h-[3.5rem] relative">
-        <Image
-          src={userProfile}
-          fill
-          className="rounded-full object-cover w-full h-full"
-          alt=""
-        />
-      </div>
+      <SmallProfileImage img={userProfile} />
 
       <div className="w-full">
         <div className="w-full h-max bg-lighter-gray dark:bg-[#41414b] rounded-lg rounded-tl-none px-[1rem] py-[0.5rem]">
@@ -41,7 +34,10 @@ const PostSingleComment = ({
           className="text-gray flex gap-[1rem] mt-[0.5rem]"
           // onClick={handlePostComment}
         >
-          <button className="px-[0.5rem] rounded-md light-gray-hover">
+          <button
+            className="px-[0.5rem] rounded-md light-gray-hover"
+            onClick={handleShowReplyInput}
+          >
             Reply
           </button>
           {!isReply && (
