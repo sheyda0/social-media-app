@@ -1,11 +1,11 @@
-import { useSelectedLayoutSegment } from "next/navigation";
+import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 
-const SidebarItem = ({ path, targetSegment, icon, activeIcon, label }) => {
-  const activeSegment = useSelectedLayoutSegment();
-  const isActive = activeSegment === targetSegment;
+const SidebarItem = ({ path, icon, activeIcon, label }) => {
+  const pathname = usePathname();
+  const isActive = pathname.startsWith(path);
 
   return (
     <Link

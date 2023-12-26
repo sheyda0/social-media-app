@@ -1,12 +1,11 @@
-import Modal from "@/components/Modal";
 import Profile from "@/components/profile/Profile";
 
+export const metadata = {
+  title: "Profile",
+};
+
 const page = () => {
-  return (
-    <>
-      <Profile />
-    </>
-  );
+  return <Profile />;
 };
 
 export default page;

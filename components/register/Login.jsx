@@ -11,6 +11,7 @@ import { SiGoogle } from "react-icons/si";
 import { useLoginMutation } from "@/redux/features/auth/authApiSlice";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "@/redux/features/auth/authSlice";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -19,6 +20,7 @@ const Login = () => {
 
   const [login, { isLoading }] = useLoginMutation();
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     setErrorMsg("");
@@ -30,23 +32,27 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const userData = await login({ username, password }.unwrap());
-      dispatch(setCredentials({ ...userData, user }));
-      setUsername("");
-      setPassword("");
-    } catch (error) {
-      if (!err?.originalStatus) {
-        setErrorMsg("No Server Response");
-      } else if (err.originalStatus === 400) {
-        setErrorMsg("Missing Username or Password");
-      } else if (err.originalStatus === 401) {
-        setErrorMsg("Unauthorized");
-      } else {
-        setErrorMsg("Login Failed");
-      }
-      errRef.current.focus();
-    }
+    router.push("/home");
+
+    // try {
+    //   const userData = await login({ username, password }.unwrap());
+    //   dispatch(setCredentials({ ...userData, user }));
+    //   setUsername("");
+    //   setPassword("");
+    //   redirect("/home");
+    // } catch (error) {
+    //   if (!error?.originalStatus) {
+    //     setErrorMsg("No Server Response");
+    //   } else if (error.originalStatus === 400) {
+    //     setErrorMsg("Missing Username or Password");
+    //   } else if (error.originalStatus === 401) {
+    //     setErrorMsg("Unauthorized");
+    //   } else {
+    //     setErrorMsg("Login Failed");
+    //   }
+    //   errRef.current.focus();
+    //   console.log(error);
+    // }
   };
 
   return (

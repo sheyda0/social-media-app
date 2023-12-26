@@ -2,13 +2,21 @@ import Image from "next/image";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import EditProfileButton from "./EditProfileButton";
 import { isMobile } from "react-device-detect";
+import { openModal } from "@/redux/features/modal/modalSlice";
+import { useDispatch } from "react-redux";
 
-const ProfileInfo = ({ handleShowModal }) => {
+const ProfileInfo = () => {
+  const dispatch = useDispatch();
+
+  const handleOpenModal = () => {
+    dispatch(openModal());
+  };
+
   return (
     <div className="w-full md:w-1/2 relative">
       {isMobile && (
         <EditProfileButton
-          onClick={handleShowModal}
+          onClick={handleOpenModal}
           cln="absolute right-0 top-[1rem]"
         />
       )}

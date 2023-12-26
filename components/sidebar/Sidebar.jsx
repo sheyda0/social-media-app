@@ -29,14 +29,12 @@ const Sidebar = () => {
         <div className="flex md:block w-full justify-between">
           <SidebarItem
             path="/home"
-            targetSegment="home"
             icon={HomeIcon}
             activeIcon={HomeActiveIcon}
             label="Home"
           />
           <SidebarItem
             path="/people"
-            targetSegment="people"
             icon={PeopleIcon}
             activeIcon={PeopleActiveIcon}
             label="People"
@@ -47,7 +45,6 @@ const Sidebar = () => {
           {isMobile ? (
             <SidebarItem
               path="/notifications"
-              targetSegment="notifications"
               icon={bellIcon}
               activeIcon={bellActiveIcon}
               label="Notifications"
@@ -55,7 +52,6 @@ const Sidebar = () => {
           ) : (
             <SidebarItem
               path="/saved"
-              targetSegment="saved"
               icon={SavedIcon}
               activeIcon={SavedActiveIcon}
               label="Saved"
@@ -63,7 +59,6 @@ const Sidebar = () => {
           )}
           <SidebarItem
             path="/explore"
-            targetSegment="explore"
             icon={ExploreIcon}
             activeIcon={ExploreActiveIcon}
             label="Explore"

@@ -4,6 +4,7 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import RegisterFormTitle from "./RegisterFormTitle";
 import { useDispatch } from "react-redux";
 import { useSignUpMutation } from "@/redux/features/auth/authApiSlice";
+import { redirect } from "next/navigation";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -26,17 +27,19 @@ const SignUp = () => {
       setUsername("");
       setEmail("");
       setPassword("");
+      redirect("/profile");
     } catch (error) {
-      if (!err?.originalStatus) {
-        setErrorMsg("No Server Response");
-      } else if (err.originalStatus === 400) {
-        setErrorMsg("Missing Username or Password");
-      } else if (err.originalStatus === 401) {
-        setErrorMsg("Unauthorized");
-      } else {
-        setErrorMsg("Login Failed");
-      }
-      errRef.current.focus();
+      // if (!err?.originalStatus) {
+      //   setErrorMsg("No Server Response");
+      // } else if (err.originalStatus === 400) {
+      //   setErrorMsg("Missing Username or Password");
+      // } else if (err.originalStatus === 401) {
+      //   setErrorMsg("Unauthorized");
+      // } else {
+      //   setErrorMsg("Login Failed");
+      // }
+      // errRef.current.focus();
+      console.log(error);
     }
   };
 
