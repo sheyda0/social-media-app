@@ -8,9 +8,9 @@ export default function MainLayout({ children }) {
     <Providers>
       <div className="flex flex-col-reverse md:flex-row w-full h-[100vh] md:h-full justify-between">
         <Sidebar />
-        <div className="flex flex-col px-[1rem] md:px-[1.875rem] w-full h-full md:w-[60%] pb-[5rem] md:pb-0">
+        <div className="flex flex-col px-[1rem] md:px-[1.875rem] w-full !h-[100vh] md:w-[60%] pb-[5rem] md:pb-0">
           <Header />
-          <div>{children}</div>
+          <div className="w-full h-full">{children}</div>
         </div>
         <RightSidebar />
       </div>

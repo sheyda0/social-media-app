@@ -11,7 +11,7 @@ const SidebarItem = ({ path, icon, activeIcon, label }) => {
     <Link
       href={path}
       className={`px-[1.25rem] round medium-height flex items-center ${
-        isActive ? "bg-purple text-milky font-semibold" : "text-gray"
+        isActive ? "blue-gradient-bg text-milky font-semibold" : "text-gray"
       }`}
     >
       <div

@@ -2,7 +2,7 @@ import RegistrationSidebarTitle from "./RegistrationSidebarTitle";
 
 const RegistrationSidebar = ({ onClick }) => {
   return (
-    <div class="img w-[15vw] md:w-[40vw]">
+    <div className="img w-[15vw] md:w-[40vw]">
       <RegistrationSidebarTitle
         title="New here?"
         sub="Sign up and discover great amount of new opportunities!"
@@ -15,9 +15,9 @@ const RegistrationSidebar = ({ onClick }) => {
       />
 
       <div className="w-full h-full absolute left-[-1.5rem] top-[50%]">
-        <div class="img__btn" onClick={onClick}>
-          <span class="m--up">Sign Up</span>
-          <span class="m--in">Sign In</span>
+        <div className="img__btn" onClick={onClick}>
+          <span className="m--up">Sign Up</span>
+          <span className="m--in">Sign In</span>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SmallProfileImage = ({ img }) => {
   return (
-    <div className="min-w-[3.5rem] h-[3.5rem] relative">
+    <div className="min-w-[5.5rem] h-[5.5rem] relative">
       <Image
         src={img}
         fill

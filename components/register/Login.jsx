@@ -56,7 +56,7 @@ const Login = () => {
   };
 
   return (
-    <div class="form sign-in flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
+    <div className="form sign-in flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
       <div className="flex flex-col w-[75vw] md:w-[30rem]">
         <RegisterFormTitle title="Welcome back" sub="Sign in to your account" />
         <div className="flex flex-col gap-[1.5rem]">

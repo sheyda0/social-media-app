@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import "../assets/styles/globals.css";
+import "../assets/styles/colors.css";
 import ReduxProvider from "@/redux/provider";
-
-const inter = Inter({ subsets: ["latin"] });
+import AbsoluteShadow from "@/components/utils/AbsoluteShadow";
+import Cursor from "@/components/utils/Cursor";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +12,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body id="space" className="font-alata">
+        <Cursor />
+        <div class="cursor"></div>
+        <div class="cursor2"></div>
+        <div className="main"></div>
+        <AbsoluteShadow cln="top-[20rem] left-[30rem] absolute-shadow-purple w-[10rem] h-[10rem]" />
+        <AbsoluteShadow cln="top-[15rem] left-[20rem] absolute-shadow-blue w-[6rem] h-[6rem]" />
+
+        <AbsoluteShadow cln="bottom-[5rem] right-[15rem] absolute-shadow-purple-sm w-[5rem] h-[5rem]" />
+        <AbsoluteShadow cln="bottom-[5rem] right-[26rem] absolute-shadow-blue-sm w-[3rem] h-[3rem]" />
+
         <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>

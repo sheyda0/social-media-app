@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+@function random-delay($min, $max) {
+  @return ($min + random() * ($max - $min));
+}
+
+@function random-percentage($min, $max) {
+  @return ($min + random($max - $min + 1));
+}
+
+body {
+  background: black;
+  min-height: 800lvh;
+  width: 100lvw;
+
+  h1 {
+    position: fixed;
+    width: 100lvw;
+    height: 100lvh;
+    text-align: center;
+    line-height: 100lvh;
+    font-size: 5lvh;
+    font-family: sans-serif;
+    color: hsla(0, 100, 100, 0.8);
+
+    animation-name: disappear;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timeline: scroll(block nearest);
+    animation-range: 0 40%;
+  }
+
+  .effect-wrapper {
+    position: fixed;
+    top: -2lvh;
+    bottom: -2lvh;
+    right: -2vw;
+    left: -2vw;
+
+    .asteroids {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .asteroid {
+        --firstColor: hsl(0 100% 65%);
+        --secondColor: hsl(315 100% 75%);
+        --thirdColor: hsl(270 100% 55%);
+        padding: 2vw;
+        height: 250px;
+        aspect-ratio: 1 / 1.3;
+        transform-origin: 0 0;
+        opacity: 0;
+        transform: rotate3d(0, 0, 1, -25deg) translate3d(0, 400%, 0);
+        animation-name: fly;
+        animation-duration: 1ms;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-timeline: scroll(block nearest);
+
+        &::after {
+          display: block;
+          content: "";
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(
+            var(--firstColor) 0%,
+            var(--secondColor) 25%,
+            var(--thirdColor) 50%,
+            var(--firstColor) 75%,
+            var(--secondColor) 100%
+          );
+          background-size: 100% 300%;
+          background-position-y: 0%;
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0)
+          );
+          border-radius: 3px 3px 100% 100%;
+          animation: shine 4s ease-in-out infinite;
+        }
+
+        $n: 80;
+        @for $i from 1 through $n {
+          &:nth-child(#{$i}) {
+            $animation-start: random-percentage(0, 40) + 0%;
+            $animation-end: random-percentage($animation-start + 30, 100) + 0%;
+            --animation-start-percentage: #{$animation-start};
+            --animation-stop-percentage: #{$animation-end};
+            animation-range: var(--animation-start-percentage)
+              var(--animation-stop-percentage);
+
+            &::after {
+              animation-delay: #{random-delay(-2, 0)}s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shine {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    color: hsl(0, 100, 100, 0.8);
+    filter: blur(0px);
+  }
+  15% {
+    filter: blur(3px);
+  }
+  65% {
+    color: hsl(0, 100, 100, 0.4);
+  }
+  to {
+    color: hsl(0, 100, 100, 0);
+    filter: blur(15px);
+  }
+}
+
+@keyframes fly {
+  from {
+    transform: rotate3d(0, 0, 1, -35deg) scale3d(0.3, 0.5, 1)
+      translate3d(0, 150lvh, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, -35deg) scale3d(1, 1, 1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

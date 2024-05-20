@@ -1,21 +1,25 @@
 import Image from "next/image";
-import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
+import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Link from "next/link";
 import PrimaryButton from "../buttons/PrimaryButton";
+import BlurContainer from "../containers/BlurContainer";
 
 const FollowSuggestItem = () => {
   return (
-    <div className="pl-[0.875rem] pr-[1.25rem] raise text-gray bg-light-white dark:bg-[#141520] round py-[0.875rem] mb-[1rem] flex justify-between items-center">
+    <BlurContainer cln="pr-[1rem] pl-[0.5rem] h-[5.5rem] raise text-gray round mb-[1rem] flex justify-between items-center  transition-all hover:translate-x-[-1rem]">
       <div className="flex gap-[0.75rem]">
-        <Link href="/">
-          <Image
-            src={Profile}
-            width={55}
-            height={55}
-            className="round"
-            alt=""
-          />
-        </Link>
+        <div className="w-[4.2rem] h-[4.2rem] rounded-full border-[1px] border-[var(--purple)] flex justify-center items-center blue-box-shadow">
+          <div className="w-[4.2rem] relative h-[4.2rem]">
+            <Link href="/">
+              <Image
+                src={ProfileImage}
+                fill
+                className="object-cover rounded-full"
+                alt=""
+              />
+            </Link>
+          </div>
+        </div>
         <div className=" flex flex-col justify-center gap-[0.25rem]">
           <Link
             href="/"
@@ -31,7 +35,7 @@ const FollowSuggestItem = () => {
       <PrimaryButton cln="text-[0.75rem] px-[0.875rem] py-[0.2rem] rounded-[0.375rem] btn-15-sm-round">
         Follow
       </PrimaryButton>
-    </div>
+    </BlurContainer>
   );
 };
 

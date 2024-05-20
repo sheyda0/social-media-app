@@ -44,7 +44,7 @@ const SignUp = () => {
   };
 
   return (
-    <div class="form sign-up flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
+    <div className="form sign-up flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
       <form
         action=""
         className="flex flex-col w-[75vw] md:w-[30rem]"

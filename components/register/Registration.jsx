@@ -14,12 +14,12 @@ const Registration = () => {
   return (
     <div className="h-[100vh] w-[100vw]">
       <div
-        class={`cont ${
+        className={`cont ${
           showSignUp && "s--signup"
         } overflow-hidden relative w-[100vw] h-[100vh] bg-[#141520]`}
       >
         <Login />
-        <div class="sub-cont left-[85vw] md:left-[60vw] w-[100vw] h-[100vh]">
+        <div className="sub-cont left-[85vw] md:left-[60vw] w-[100vw] h-[100vh]">
           <RegistrationSidebar onClick={handleShowSignUp} />
           <SignUp />
         </div>

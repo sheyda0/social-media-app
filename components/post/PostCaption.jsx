@@ -29,7 +29,7 @@ const PostCaption = () => {
       </p>
       {!showMore && (
         <button
-          className="text-gray text-[1.125rem] absolute right-0 bottom-0 bg-light dark:bg-[#242531]"
+          className="text-gray text-[1.125rem] absolute right-0 bottom-0 bg-[#0a1223] rounded-md px-[0.3rem]"
           onClick={handleShowMore}
         >
           ...see more

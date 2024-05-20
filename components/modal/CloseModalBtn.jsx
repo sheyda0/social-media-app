@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../redux/features/modal/modalSlice";
 
-const CloseModalBtn = ({ cln }) => {
+const CloseModalBtn = ({ cln, onClick }) => {
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
@@ -12,7 +12,10 @@ const CloseModalBtn = ({ cln }) => {
   };
 
   return (
-    <button className={cln ? cln : ""} onClick={handleCloseModal}>
+    <button
+      className={cln ? cln : ""}
+      onClick={onClick ? onClick : handleCloseModal}
+    >
       <IoCloseOutline className="text-gray" size={24} />
     </button>
   );

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PostImg from "../../assets/images/vertical-shot-curvy-road-forest-covered-yellowing-trees-dried-leaves-autum.jpg";
+import PostImg from "../../assets/images/shahadat-rahman-voM1Z9cGPCU-unsplash.jpg";
 
 const PostImage = () => {
   return (

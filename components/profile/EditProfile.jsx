@@ -1,7 +1,6 @@
 "use client";
 
 import Input from "../inputs/Input";
-import Modal from "../modal/Modal";
 import PrimaryButton from "../buttons/PrimaryButton";
 import { useState } from "react";
 import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
@@ -12,6 +11,7 @@ import { LuTrash2 } from "react-icons/lu";
 import SmallItem from "../SmallItem";
 import { MdOutlineEdit } from "react-icons/md";
 import CloseModalBtn from "../modal/CloseModalBtn";
+import ModalContainer from "../modal/ModalContainer";
 
 const EditProfile = () => {
   const [profileImage, setProfileImage] = useState(Profile);
@@ -29,7 +29,7 @@ const EditProfile = () => {
   };
 
   return (
-    <Modal>
+    <ModalContainer>
       {/* header */}
       <div className="w-full h-[4rem] borderb-gray flex items-center justify-between mb-[1.5rem] px-[2rem]">
         <h2 className="font-semibold text-gray dark:text-[#d6d6d6]">
@@ -104,7 +104,7 @@ const EditProfile = () => {
           </div>
         </form>
       </div>
-    </Modal>
+    </ModalContainer>
   );
 };
 

@@ -3,10 +3,11 @@
 import Image from "next/image";
 import ExploreActiveIcon from "../../assets/icons/search-svgrepo-com (2).svg";
 import Input from "../inputs/Input";
+import BlurContainer from "../containers/BlurContainer";
 
 const Searchbar = () => {
   return (
-    <div className="relative">
+    <BlurContainer cln="relative round border-[2px] border-[#5C8CE2] raise">
       <Input
         type="text"
         placeholder="Search Here..."
@@ -19,7 +20,7 @@ const Searchbar = () => {
         className="absolute top-[1.2rem] right-[1.25rem]"
         alt=""
       />
-    </div>
+    </BlurContainer>
   );
 };
 

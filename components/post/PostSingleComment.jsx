@@ -15,7 +15,7 @@ const PostSingleComment = ({
       <SmallProfileImage img={userProfile} />
 
       <div className="w-full">
-        <div className="w-full h-max bg-lighter-gray dark:bg-[#41414b] rounded-lg rounded-tl-none px-[1rem] py-[0.5rem]">
+        <div className="w-full h-max bg-[#0C1323] rounded-lg rounded-tl-none px-[1rem] py-[0.5rem]">
           {/* user info */}
           <div className="flex gap-[0.5rem]">
             <Username>{username}</Username>
