@@ -1,6 +1,6 @@
 const ScrollSpace = () => {
   return (
-    <>
+    <div className="space-scroll">
       <div className="effect-wrapper">
         <div className="asteroids">
           <div className="asteroid one"></div>
@@ -86,8 +86,11 @@ const ScrollSpace = () => {
         </div>
       </div>
 
-      <h1>Have a little scroll</h1>
-    </>
+      <div className="space-scroll-title">
+        <h1>Welcome to StarlightVoyage</h1>
+        <h2>Have a little scroll</h2>
+      </div>
+    </div>
   );
 };
 

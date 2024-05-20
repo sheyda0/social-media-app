@@ -3,6 +3,7 @@ import "../assets/styles/colors.css";
 import ReduxProvider from "@/redux/provider";
 import AbsoluteShadow from "@/components/utils/AbsoluteShadow";
 import Cursor from "@/components/utils/Cursor";
+import ScrollSpace from "@/components/register/ScrollSpace";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <body id="space" className="font-alata">
+      <body className="font-alata">
         <Cursor />
         <div class="cursor"></div>
         <div class="cursor2"></div>

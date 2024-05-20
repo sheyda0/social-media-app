@@ -1,3 +1,5 @@
+import PrimaryButton from "../buttons/PrimaryButton";
+import LittleUniverse from "../utils/little-universe/LittleUniverse";
 import RegistrationSidebarTitle from "./RegistrationSidebarTitle";
 
 const RegistrationSidebar = ({ onClick }) => {
@@ -16,9 +18,19 @@ const RegistrationSidebar = ({ onClick }) => {
 
       <div className="w-full h-full absolute left-[-1.5rem] top-[50%]">
         <div className="img__btn" onClick={onClick}>
-          <span className="m--up">Sign Up</span>
-          <span className="m--in">Sign In</span>
+          <PrimaryButton cln="m--up register-sidebar-btn !rounded-full">
+            Sign Up
+          </PrimaryButton>
+          {/* <span className="m--up">Sign Up</span> */}
+          <PrimaryButton cln="m--in register-sidebar-btn !rounded-full">
+            Sign In
+          </PrimaryButton>
+          {/* <span className="m--in register-sidebar-btn">Sign In</span> */}
         </div>
+      </div>
+
+      <div className="flex justify-center mt-[5rem]">
+        <LittleUniverse />
       </div>
     </div>
   );

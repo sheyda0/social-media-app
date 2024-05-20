@@ -1,0 +1,1356 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Alata", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  background-color: #0a1223;
+}
+
+* {
+  font-family: "Alata", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  cursor: none;
+}
+
+@media screen and (max-width: 1710px) {
+  * {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img__btn {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  .cont.s--signup .sub-cont {
+    transform: translate3d(-85vw, 0, 0) !important;
+    -webkit-transform: translate3d(-85vw, 0, 0) !important;
+    -moz-transform: translate3d(-85vw, 0, 0) !important;
+    -ms-transform: translate3d(-85vw, 0, 0) !important;
+    -o-transform: translate3d(-85vw, 0, 0) !important;
+  }
+  .cont.s--signup .sign-up {
+    transform: translate3d(30vw, 0, 0);
+    -webkit-transform: translate3d(30vw, 0, 0);
+    -moz-transform: translate3d(30vw, 0, 0);
+    -ms-transform: translate3d(30vw, 0, 0);
+    -o-transform: translate3d(30vw, 0, 0);
+  }
+  .form.sign-up {
+    width: 35vw !important;
+  }
+  .no-raise:hover,
+  .no-raise:focus {
+    box-shadow: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+  }
+  .container-height {
+    height: calc(100vh - 10.9rem) !important;
+  }
+  .rp-editor {
+    width: 89vw !important;
+    left: 1.7rem !important;
+  }
+  .rp-image-section.colors .rp-controls {
+    display: flex;
+    justify-content: center;
+  }
+  .rp-image-section.colors .rp-colors {
+    margin: 0 !important;
+  }
+  .rp-image-section.colors .rp-preview,
+  .rp-image-section.filter .rp-preview {
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+  }
+  .rp-image-section.crop .rp-preview,
+  .rp-image-section.crop .rp-controls {
+    padding-right: 12% !important;
+  }
+}
+/* @layer base {
+  body {
+    @apply dark:bg-[#141520] bg-[#f0e8f8];
+  }
+} */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.logo {
+  font-family: "Actor" !important;
+}
+
+.medium-height {
+  height: 3.7rem;
+}
+
+.medium-width {
+  width: 3.7rem;
+}
+
+.bg-light-gray {
+  background: #f2f2f2;
+}
+
+.bg-lighter-gray {
+  background: #e3e3e3;
+}
+
+.bg-dark-gray {
+  background: #242531 !important;
+}
+
+.bg-darker-gray {
+  background: #141520;
+}
+
+.bg-light-white {
+  background: #f0e8f8;
+}
+
+.bg-light {
+  background: #f4f4f7;
+}
+
+.bg-purple {
+  background: #6149ef;
+}
+
+.bg-pink {
+  background: #b621fe;
+}
+
+.text-milky {
+  color: #d6d6d6;
+}
+
+.text-dark-gray {
+  color: #444444;
+}
+
+.text-gray {
+  color: #9798ad;
+}
+
+.text-purple {
+  color: #6149ef;
+}
+
+.border-gray {
+  border: 0.2px solid rgba(151, 152, 173, 0.1254901961);
+}
+
+.borderb-gray {
+  border-bottom: 1px solid rgba(151, 152, 173, 0.1254901961);
+}
+
+.purple-shadow {
+  box-shadow: 0 0.5em 0.8em -0.5em #6149ef;
+}
+
+.round {
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -ms-border-radius: 20px !important;
+  -o-border-radius: 20px !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.light-gray-hover:hover {
+  background: #41414b;
+  transition: 0.1s all ease-in-out;
+}
+
+.custom-btn {
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-15 {
+  background: #6149ef;
+  border: none;
+  z-index: 1;
+}
+
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #b621fe;
+  /* border-radius: 0.375rem; */
+  transition: all 0.3s ease;
+}
+
+.btn-15-round:after {
+  border-radius: 10px;
+}
+
+.btn-15-sm-round:after {
+  border-radius: 0.375rem;
+}
+
+.btn-15:hover {
+  color: #fff;
+}
+
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-15:active {
+  top: 2px;
+}
+
+.sidebar-menu-title {
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #5c8ce2;
+  }
+}
+/* 
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.8em -0.5em #5c8ce2;
+  transform: translateY(-0.25em);
+}
+
+.raise {
+  --hover: #5c8ce2;
+}
+
+.raise {
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+.raise:hover,
+.raise:focus {
+  border-color: #5c8ce2;
+} */
+/* register */
+.form {
+  position: relative;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+}
+
+.form.sign-up {
+  width: 50vw;
+}
+
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  background: #141520;
+  transition: transform 1.2s ease-in-out;
+}
+
+.cont.s--signup .sub-cont {
+  transform: translate3d(-60vw, 0, 0);
+  -webkit-transform: translate3d(-60vw, 0, 0);
+  -moz-transform: translate3d(-60vw, 0, 0);
+  -ms-transform: translate3d(-60vw, 0, 0);
+  -o-transform: translate3d(-60vw, 0, 0);
+}
+
+.cont .img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding-top: 360px;
+}
+.cont .img:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url("../../assets/images/155962504_944cf495-2f5a-49c0-a973-79630bca05c9.jpg");
+  background-size: cover;
+  transition: transform 1.2s ease-in-out;
+}
+.cont .img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont .cont.s--signup .img:before {
+  transform: translate3d(50vw, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  -moz-transform: translate3d(50vw, 0, 0);
+  -ms-transform: translate3d(50vw, 0, 0);
+  -o-transform: translate3d(50vw, 0, 0);
+}
+.cont .img__text {
+  width: 40vw;
+  transition: transform 1.2s ease-in-out;
+}
+
+.cont.s--signup .img__text.m--up {
+  transform: translateX(60vw);
+  -webkit-transform: translateX(60vw);
+  -moz-transform: translateX(60vw);
+  -ms-transform: translateX(60vw);
+  -o-transform: translateX(60vw);
+}
+
+.img__text.m--in {
+  transform: translateX(-60vw);
+  -webkit-transform: translateX(-60vw);
+  -moz-transform: translateX(-60vw);
+  -ms-transform: translateX(-60vw);
+  -o-transform: translateX(-60vw);
+}
+
+.cont.s--signup .img__text.m--in {
+  transform: translateX(0);
+}
+
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.img__btn:after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.img__btn .register-sidebar-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+  font-weight: 600;
+}
+
+.img__btn .register-sidebar-btn.m--in {
+  transform: translateY(-72px);
+}
+
+.cont.s--signup .img__btn .register-sidebar-btn.m--in {
+  transform: translateY(0);
+}
+
+.cont.s--signup .img__btn .register-sidebar-btn.m--up {
+  transform: translateY(72px);
+}
+
+.sign-in {
+  transition-timing-function: ease-out;
+}
+
+.cont.s--signup .sign-in {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  transform: translate3d(40vw, 0, 0);
+  -webkit-transform: translate3d(40vw, 0, 0);
+  -moz-transform: translate3d(40vw, 0, 0);
+  -ms-transform: translate3d(40vw, 0, 0);
+  -o-transform: translate3d(40vw, 0, 0);
+}
+
+.sign-up {
+  transform: translate3d(-60vw, 0, 0);
+  -webkit-transform: translate3d(-60vw, 0, 0);
+  -moz-transform: translate3d(-60vw, 0, 0);
+  -ms-transform: translate3d(-60vw, 0, 0);
+  -o-transform: translate3d(-60vw, 0, 0);
+}
+
+.cont.s--signup .sign-up {
+  transform: translate3d(40vw, 0, 0);
+  -webkit-transform: translate3d(40vw, 0, 0);
+  -moz-transform: translate3d(40vw, 0, 0);
+  -ms-transform: translate3d(40vw, 0, 0);
+  -o-transform: translate3d(40vw, 0, 0);
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(4px);
+}
+
+.blue-gradient-bg {
+  background: rgb(106, 188, 230);
+  background: linear-gradient(90deg, rgb(106, 188, 230) 0%, rgb(19, 34, 68) 100%);
+}
+
+.blur-container {
+  background: rgb(22, 9, 240);
+  background: linear-gradient(0deg, rgb(22, 9, 240) 0%, rgb(49, 110, 244) 100%);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: inset 0px 2px 0px 0px #122149;
+  outline: none;
+}
+
+/* .add-post-modal {
+  background: ur../assets/images/ufo-spaceship-unidentified-flying-object-with-light-beam_257312-846.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+.blue-box-shadow {
+  box-shadow: 0px 0px 3px 1px #180932;
+}
+
+@media screen and (min-width: 768px) {
+  .rp-editor {
+    left: 15% !important;
+    width: 70vw !important;
+  }
+}
+.rp-editor {
+  height: 80vh !important;
+  top: 5% !important;
+  border-radius: 20px !important;
+  background-color: #080f1f !important;
+}
+
+.rp-image-preview {
+  max-width: 40vw !important;
+  max-height: 50vh !important;
+}
+
+.rp-image-section {
+  max-height: 50vh !important;
+}
+
+.rp-image-section.crop .rp-preview,
+.rp-image-section.crop .rp-controls {
+  padding-right: 43%;
+}
+
+.rp-navigation {
+  margin-bottom: 3rem !important;
+}
+
+/* space bg */
+.main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff, -20vw 49vh 0px 1px #fff, 5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0px #fff, -44vw -13vh 0px 0px #fff, 46vw 41vh 0px 1px #fff, -3vw -45vh 0px 1px #fff, 47vw 35vh 1px 0px #fff, 12vw -8vh 1px 0px #fff, -34vw 48vh 1px 1px #fff, 32vw 26vh 1px 1px #fff, 32vw -41vh 1px 1px #fff, 0vw 37vh 1px 1px #fff, 34vw -26vh 1px 0px #fff, -14vw -49vh 1px 0px #fff, -12vw 45vh 0px 1px #fff, -44vw -33vh 0px 1px #fff, -13vw 41vh 0px 0px #fff, -36vw -11vh 0px 1px #fff, -23vw -24vh 1px 0px #fff, -38vw -27vh 0px 1px #fff, 16vw -19vh 0px 0px #fff, 28vw 33vh 1px 0px #fff, -49vw -4vh 0px 0px #fff, 16vw 32vh 0px 1px #fff, 36vw -18vh 1px 0px #fff, -25vw -30vh 1px 0px #fff, -23vw 24vh 0px 1px #fff, -2vw -35vh 1px 1px #fff, -25vw 9vh 0px 0px #fff, -15vw -34vh 0px 0px #fff, -8vw -19vh 1px 0px #fff, -20vw -20vh 1px 1px #fff, 42vw 50vh 0px 1px #fff, -32vw 10vh 1px 0px #fff, -23vw -17vh 0px 0px #fff, 44vw 15vh 1px 0px #fff, -40vw 33vh 1px 1px #fff, -43vw 8vh 0px 0px #fff, -48vw -15vh 1px 1px #fff, -24vw 17vh 0px 0px #fff, -31vw 50vh 1px 0px #fff, 36vw -38vh 0px 1px #fff, -7vw 48vh 0px 0px #fff, 15vw -32vh 0px 0px #fff, 29vw -41vh 0px 0px #fff, 2vw 37vh 1px 0px #fff, 7vw -40vh 1px 1px #fff, 15vw 18vh 0px 0px #fff, 25vw -13vh 1px 1px #fff, -46vw -12vh 1px 1px #fff, -18vw 22vh 0px 0px #fff, 23vw -9vh 1px 0px #fff, 50vw 12vh 0px 1px #fff, 45vw 2vh 0px 0px #fff, 14vw -48vh 1px 0px #fff, 23vw 43vh 0px 1px #fff, -40vw 16vh 1px 1px #fff, 20vw -31vh 0px 1px #fff, -17vw 44vh 1px 1px #fff, 18vw -45vh 0px 0px #fff, 33vw -6vh 0px 0px #fff, 0vw 7vh 0px 1px #fff, -10vw -18vh 0px 1px #fff, -19vw 5vh 1px 0px #fff, 1vw 42vh 0px 0px #fff, 22vw 48vh 0px 1px #fff, 39vw -8vh 1px 1px #fff, -6vw -42vh 1px 0px #fff, -47vw 34vh 0px 0px #fff, -46vw 19vh 0px 1px #fff, -12vw -32vh 0px 0px #fff, -45vw -38vh 0px 1px #fff, -28vw 18vh 1px 0px #fff, -38vw -46vh 1px 1px #fff, 49vw -6vh 1px 1px #fff, -28vw 18vh 1px 1px #fff, 10vw -24vh 0px 1px #fff, -5vw -11vh 1px 1px #fff, 33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff, 18vw 27vh 0px 1px #fff, -8vw -10vh 1px 1px #fff;
+  /* stars were too big with the layers above but left the code in case no one cares  -- as in, if noone's just that  one other loner who actually cares    */
+  box-shadow: 24vw 9vh 1px 0px #fff, 12vw -24vh 0px 1px #fff, -45vw -22vh 0px 0px #fff, -37vw -40vh 0px 1px #fff, 29vw 19vh 0px 1px #fff, 4vw -8vh 0px 1px #fff, -5vw 21vh 1px 1px #fff, -27vw 26vh 1px 1px #fff, -47vw -3vh 1px 1px #fff, -28vw -30vh 0px 1px #fff, -43vw -27vh 0px 1px #fff, 4vw 22vh 1px 1px #fff, 36vw 23vh 0px 0px #fff, -21vw 24vh 1px 1px #fff, -16vw 2vh 1px 0px #fff, -16vw -6vh 0px 0px #fff, 5vw 26vh 0px 0px #fff, -34vw 41vh 0px 0px #fff, 1vw 42vh 1px 1px #fff, 11vw -13vh 1px 1px #fff, 48vw -8vh 1px 0px #fff, 22vw -15vh 0px 0px #fff, 45vw 49vh 0px 0px #fff, 43vw -27vh 1px 1px #fff, 20vw -2vh 0px 0px #fff, 8vw 22vh 0px 1px #fff, 39vw 48vh 1px 1px #fff, -21vw -11vh 0px 1px #fff, -40vw 45vh 0px 1px #fff, 11vw -30vh 1px 0px #fff, 26vw 30vh 1px 0px #fff, 45vw -29vh 0px 1px #fff, -2vw 18vh 0px 0px #fff, -29vw -45vh 1px 0px #fff, -7vw -27vh 1px 1px #fff, 42vw 24vh 0px 0px #fff, 45vw -48vh 1px 0px #fff, -36vw -18vh 0px 0px #fff, -44vw 13vh 0px 1px #fff, 36vw 16vh 0px 1px #fff, 40vw 24vh 0px 0px #fff, 18vw 11vh 0px 0px #fff, -15vw -23vh 1px 0px #fff, -24vw 48vh 0px 1px #fff, 27vw -45vh 1px 0px #fff, -2vw -24vh 0px 1px #fff, -15vw -28vh 0px 0px #fff, -43vw 13vh 1px 0px #fff, 7vw 27vh 1px 0px #fff, 47vw 5vh 0px 0px #fff, -45vw 15vh 1px 1px #fff, -5vw -28vh 0px 1px #fff, 38vw 25vh 1px 1px #fff, -39vw -1vh 1px 0px #fff, 5vw 0vh 1px 0px #fff, 49vw 13vh 0px 0px #fff, 48vw 10vh 0px 1px #fff, 19vw -28vh 0px 0px #fff, 4vw 7vh 0px 0px #fff, 21vw 21vh 1px 1px #fff, -15vw -15vh 0px 1px #fff, -6vw -42vh 1px 0px #fff, -15vw 48vh 1px 1px #fff, -23vw 25vh 1px 1px #fff, -48vw 25vh 0px 1px #fff, -31vw -19vh 0px 1px #fff, 4vw 37vh 1px 1px #fff, -43vw 28vh 0px 0px #fff, 3vw -25vh 0px 1px #fff, -39vw 14vh 0px 1px #fff, -40vw 31vh 0px 1px #fff, 35vw -36vh 1px 1px #fff, 16vw 49vh 0px 0px #fff, 6vw 39vh 0px 0px #fff, 3vw -35vh 0px 1px #fff, -44vw -2vh 1px 0px #fff, -6vw 21vh 1px 0px #fff, 48vw 9vh 1px 1px #fff, -43vw 30vh 1px 1px #fff, 29vw -12vh 1px 1px #fff, -48vw 13vh 1px 0px #fff, -42vw 32vh 1px 1px #fff, 34vw 15vh 1px 1px #fff, 29vw -37vh 1px 1px #fff, 28vw 2vh 0px 0px #fff;
+  animation: zoom 16s alternate infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+/* end star */
+.post:last-of-type {
+  margin-bottom: 10rem !important;
+}
+
+.absolute-shadow-purple {
+  box-shadow: 0px 0px 300px 20px rgb(51, 7, 81);
+  background: rgba(51, 7, 81, 0.3);
+}
+
+.absolute-shadow-blue {
+  box-shadow: 0px 0px 300px 20px rgb(36, 18, 154);
+  background: rgba(36, 18, 154, 0.15);
+}
+
+.absolute-shadow-purple-sm {
+  box-shadow: 0px 0px 300px 20px rgb(51, 7, 81);
+  background: rgba(51, 7, 81, 0.19);
+}
+
+.absolute-shadow-blue-sm {
+  box-shadow: 0px 0px 300px 20px rgb(36, 18, 154);
+  background: rgba(36, 18, 154, 0.1);
+}
+
+/* cursor */
+a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 0px;
+  left: 0%;
+  transition: width 0.3s ease;
+}
+
+.cursor {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: 1px solid white;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 1000;
+}
+
+.cursor2 {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: white;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 1000;
+}
+
+.hover {
+  background-color: #5c8ce2;
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.space-scroll {
+  overflow-y: scroll;
+  background: black;
+  min-height: 400lvh;
+  width: 100lvw;
+}
+.space-scroll .space-scroll-title {
+  position: fixed;
+  width: 100lvw;
+  height: 100lvh;
+  text-align: center;
+  line-height: 100lvh;
+  font-size: 5lvh;
+  font-family: sans-serif;
+  color: hsla(0, 100%, 100%, 0.8);
+  animation-name: disappear;
+  animation-duration: 1ms;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-timeline: scroll(block nearest);
+  animation-range: 0 40%;
+}
+.space-scroll .space-scroll-title h1,
+.space-scroll .space-scroll-title h2 {
+  height: 1rem;
+}
+.space-scroll .space-scroll-title h2 {
+  margin-top: 3rem;
+  font-size: lvh;
+}
+.space-scroll .effect-wrapper {
+  position: fixed;
+  top: -2lvh;
+  bottom: -2lvh;
+  right: -2vw;
+  left: -2vw;
+}
+.space-scroll .effect-wrapper .asteroids {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid {
+  --firstColor: hsl(0 100% 65%);
+  --secondColor: hsl(315 100% 75%);
+  --thirdColor: hsl(270 100% 55%);
+  padding: 2vw;
+  height: 250px;
+  aspect-ratio: 1/1.3;
+  transform-origin: 0 0;
+  opacity: 0;
+  transform: rotate3d(0, 0, 1, -25deg) translate3d(0, 400%, 0);
+  animation-name: fly;
+  animation-duration: 1ms;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-timeline: scroll(block nearest);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid::after {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(var(--firstColor) 0%, var(--secondColor) 25%, var(--thirdColor) 50%, var(--firstColor) 75%, var(--secondColor) 100%);
+  background-size: 100% 300%;
+  background-position-y: 0%;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0));
+  border-radius: 3px 3px 100% 100%;
+  animation: shine 4s ease-in-out infinite;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(1) {
+  --animation-start-percentage: 4%;
+  --animation-stop-percentage: 64%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(1)::after {
+  animation-delay: -1.4028154719s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(2) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 98%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(2)::after {
+  animation-delay: -0.6187088612s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(3) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 73%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(3)::after {
+  animation-delay: -0.9984723619s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(4) {
+  --animation-start-percentage: 13%;
+  --animation-stop-percentage: 98%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(4)::after {
+  animation-delay: -0.8584759173s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(5) {
+  --animation-start-percentage: 19%;
+  --animation-stop-percentage: 89%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(5)::after {
+  animation-delay: -0.5016579431s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(6) {
+  --animation-start-percentage: 12%;
+  --animation-stop-percentage: 54%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(6)::after {
+  animation-delay: -0.5242614192s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(7) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 91%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(7)::after {
+  animation-delay: -1.6124715091s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(8) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 44%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(8)::after {
+  animation-delay: -1.1414095352s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(9) {
+  --animation-start-percentage: 12%;
+  --animation-stop-percentage: 34%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(9)::after {
+  animation-delay: -0.0048502858s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(10) {
+  --animation-start-percentage: 13%;
+  --animation-stop-percentage: 43%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(10)::after {
+  animation-delay: -0.3380365615s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(11) {
+  --animation-start-percentage: 20%;
+  --animation-stop-percentage: 64%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(11)::after {
+  animation-delay: -0.1065327574s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(12) {
+  --animation-start-percentage: 16%;
+  --animation-stop-percentage: 94%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(12)::after {
+  animation-delay: -1.0942734727s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(13) {
+  --animation-start-percentage: 2%;
+  --animation-stop-percentage: 38%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(13)::after {
+  animation-delay: -0.6068128297s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(14) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 85%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(14)::after {
+  animation-delay: -1.2047455586s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(15) {
+  --animation-start-percentage: 14%;
+  --animation-stop-percentage: 37%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(15)::after {
+  animation-delay: -0.0293236409s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(16) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 65%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(16)::after {
+  animation-delay: -1.4360759074s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(17) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 96%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(17)::after {
+  animation-delay: -1.9905008942s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(18) {
+  --animation-start-percentage: 3%;
+  --animation-stop-percentage: 31%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(18)::after {
+  animation-delay: -0.0393233708s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(19) {
+  --animation-start-percentage: 9%;
+  --animation-stop-percentage: 93%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(19)::after {
+  animation-delay: -1.0474964749s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(20) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 74%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(20)::after {
+  animation-delay: -1.4935240341s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(21) {
+  --animation-start-percentage: 4%;
+  --animation-stop-percentage: 41%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(21)::after {
+  animation-delay: -1.1993774992s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(22) {
+  --animation-start-percentage: 12%;
+  --animation-stop-percentage: 81%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(22)::after {
+  animation-delay: -1.2784656994s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(23) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 100%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(23)::after {
+  animation-delay: -1.3587516142s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(24) {
+  --animation-start-percentage: 11%;
+  --animation-stop-percentage: 97%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(24)::after {
+  animation-delay: -0.7930650246s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(25) {
+  --animation-start-percentage: 19%;
+  --animation-stop-percentage: 77%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(25)::after {
+  animation-delay: -1.5661181985s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(26) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 89%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(26)::after {
+  animation-delay: -1.049879434s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(27) {
+  --animation-start-percentage: 9%;
+  --animation-stop-percentage: 65%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(27)::after {
+  animation-delay: -1.6592118719s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(28) {
+  --animation-start-percentage: 13%;
+  --animation-stop-percentage: 41%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(28)::after {
+  animation-delay: -1.0723462424s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(29) {
+  --animation-start-percentage: 5%;
+  --animation-stop-percentage: 39%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(29)::after {
+  animation-delay: -1.8837627287s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(30) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 56%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(30)::after {
+  animation-delay: -0.7983218659s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(31) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 45%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(31)::after {
+  animation-delay: -0.0720427796s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(32) {
+  --animation-start-percentage: 8%;
+  --animation-stop-percentage: 100%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(32)::after {
+  animation-delay: -1.0222613453s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(33) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 86%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(33)::after {
+  animation-delay: -1.732232832s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(34) {
+  --animation-start-percentage: 7%;
+  --animation-stop-percentage: 37%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(34)::after {
+  animation-delay: -1.2083316903s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(35) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 59%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(35)::after {
+  animation-delay: -0.7168345526s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(36) {
+  --animation-start-percentage: 3%;
+  --animation-stop-percentage: 43%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(36)::after {
+  animation-delay: -1.2135641517s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(37) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 85%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(37)::after {
+  animation-delay: -1.214325269s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(38) {
+  --animation-start-percentage: 4%;
+  --animation-stop-percentage: 78%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(38)::after {
+  animation-delay: -1.6363129356s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(39) {
+  --animation-start-percentage: 18%;
+  --animation-stop-percentage: 49%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(39)::after {
+  animation-delay: -0.5684727943s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(40) {
+  --animation-start-percentage: 6%;
+  --animation-stop-percentage: 27%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(40)::after {
+  animation-delay: -1.3072228849s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(41) {
+  --animation-start-percentage: 19%;
+  --animation-stop-percentage: 64%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(41)::after {
+  animation-delay: -1.5373588054s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(42) {
+  --animation-start-percentage: 10%;
+  --animation-stop-percentage: 48%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(42)::after {
+  animation-delay: -0.254139314s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(43) {
+  --animation-start-percentage: 18%;
+  --animation-stop-percentage: 83%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(43)::after {
+  animation-delay: -1.1461030334s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(44) {
+  --animation-start-percentage: 6%;
+  --animation-stop-percentage: 48%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(44)::after {
+  animation-delay: -1.105957009s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(45) {
+  --animation-start-percentage: 1%;
+  --animation-stop-percentage: 68%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(45)::after {
+  animation-delay: -0.266323579s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(46) {
+  --animation-start-percentage: 10%;
+  --animation-stop-percentage: 32%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(46)::after {
+  animation-delay: -0.5330257943s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(47) {
+  --animation-start-percentage: 1%;
+  --animation-stop-percentage: 76%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(47)::after {
+  animation-delay: -0.0759518795s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(48) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 71%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(48)::after {
+  animation-delay: -0.7476732316s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(49) {
+  --animation-start-percentage: 18%;
+  --animation-stop-percentage: 43%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(49)::after {
+  animation-delay: -0.1383400172s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(50) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 92%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(50)::after {
+  animation-delay: -0.0488050216s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(51) {
+  --animation-start-percentage: 16%;
+  --animation-stop-percentage: 63%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(51)::after {
+  animation-delay: -1.8972706648s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(52) {
+  --animation-start-percentage: 16%;
+  --animation-stop-percentage: 79%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(52)::after {
+  animation-delay: -0.7228864345s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(53) {
+  --animation-start-percentage: 8%;
+  --animation-stop-percentage: 61%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(53)::after {
+  animation-delay: -1.2156584336s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(54) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 45%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(54)::after {
+  animation-delay: -0.2052656401s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(55) {
+  --animation-start-percentage: 12%;
+  --animation-stop-percentage: 66%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(55)::after {
+  animation-delay: -0.3594084185s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(56) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 72%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(56)::after {
+  animation-delay: -0.4000235925s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(57) {
+  --animation-start-percentage: 5%;
+  --animation-stop-percentage: 64%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(57)::after {
+  animation-delay: -1.4458207276s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(58) {
+  --animation-start-percentage: 5%;
+  --animation-stop-percentage: 97%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(58)::after {
+  animation-delay: -1.1962594108s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(59) {
+  --animation-start-percentage: 15%;
+  --animation-stop-percentage: 61%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(59)::after {
+  animation-delay: -0.4883403835s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(60) {
+  --animation-start-percentage: 16%;
+  --animation-stop-percentage: 71%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(60)::after {
+  animation-delay: -0.150220652s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(61) {
+  --animation-start-percentage: 13%;
+  --animation-stop-percentage: 82%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(61)::after {
+  animation-delay: -1.1847494684s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(62) {
+  --animation-start-percentage: 9%;
+  --animation-stop-percentage: 43%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(62)::after {
+  animation-delay: -0.2747165053s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(63) {
+  --animation-start-percentage: 6%;
+  --animation-stop-percentage: 101%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(63)::after {
+  animation-delay: -1.0818155513s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(64) {
+  --animation-start-percentage: 7%;
+  --animation-stop-percentage: 37%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(64)::after {
+  animation-delay: -0.0471613526s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(65) {
+  --animation-start-percentage: 3%;
+  --animation-stop-percentage: 96%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(65)::after {
+  animation-delay: -1.2113320927s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(66) {
+  --animation-start-percentage: 18%;
+  --animation-stop-percentage: 80%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(66)::after {
+  animation-delay: -0.0274444955s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(67) {
+  --animation-start-percentage: 5%;
+  --animation-stop-percentage: 88%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(67)::after {
+  animation-delay: -1.0346251303s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(68) {
+  --animation-start-percentage: 13%;
+  --animation-stop-percentage: 83%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(68)::after {
+  animation-delay: -1.5560848807s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(69) {
+  --animation-start-percentage: 18%;
+  --animation-stop-percentage: 87%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(69)::after {
+  animation-delay: -0.5807647736s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(70) {
+  --animation-start-percentage: 4%;
+  --animation-stop-percentage: 49%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(70)::after {
+  animation-delay: -0.2960796032s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(71) {
+  --animation-start-percentage: 7%;
+  --animation-stop-percentage: 88%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(71)::after {
+  animation-delay: -0.9927123893s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(72) {
+  --animation-start-percentage: 1%;
+  --animation-stop-percentage: 69%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(72)::after {
+  animation-delay: -1.664267743s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(73) {
+  --animation-start-percentage: 21%;
+  --animation-stop-percentage: 93%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(73)::after {
+  animation-delay: -0.8568650293s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(74) {
+  --animation-start-percentage: 6%;
+  --animation-stop-percentage: 62%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(74)::after {
+  animation-delay: -0.0011169171s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(75) {
+  --animation-start-percentage: 19%;
+  --animation-stop-percentage: 101%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(75)::after {
+  animation-delay: -1.2842557339s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(76) {
+  --animation-start-percentage: 16%;
+  --animation-stop-percentage: 61%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(76)::after {
+  animation-delay: -0.9554818613s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(77) {
+  --animation-start-percentage: 17%;
+  --animation-stop-percentage: 60%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(77)::after {
+  animation-delay: -1.067455399s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(78) {
+  --animation-start-percentage: 8%;
+  --animation-stop-percentage: 73%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(78)::after {
+  animation-delay: -1.6517930721s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(79) {
+  --animation-start-percentage: 8%;
+  --animation-stop-percentage: 44%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(79)::after {
+  animation-delay: -0.1438294097s;
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(80) {
+  --animation-start-percentage: 6%;
+  --animation-stop-percentage: 34%;
+  animation-range: var(--animation-start-percentage) var(--animation-stop-percentage);
+}
+.space-scroll .effect-wrapper .asteroids .asteroid:nth-child(80)::after {
+  animation-delay: -1.2902524574s;
+}
+
+@keyframes shine {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: 100%;
+  }
+}
+@keyframes disappear {
+  from {
+    color: hsla(0, 100%, 100%, 0.8);
+    filter: blur(0px);
+  }
+  15% {
+    filter: blur(3px);
+  }
+  65% {
+    color: hsla(0, 100%, 100%, 0.4);
+  }
+  to {
+    color: hsla(0, 100%, 100%, 0);
+    filter: blur(15px);
+  }
+}
+@keyframes fly {
+  from {
+    transform: rotate3d(0, 0, 1, -35deg) scale3d(0.3, 0.5, 1) translate3d(0, 150lvh, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, -35deg) scale3d(1, 1, 1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=globals.css.map */

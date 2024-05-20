@@ -75,7 +75,7 @@ const SignUp = () => {
           onChange={handlePasswordInput}
           required={true}
         />
-        <PrimaryButton cln="round btn-15-round text-[1.125rem] medium-height">
+        <PrimaryButton cln="round btn-15-round text-[1.125rem] medium-height mt-[2rem]">
           Sign In
         </PrimaryButton>
       </form>
