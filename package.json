@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
+    "@supabase/ssr": "^0.3.0",
+    "@supabase/supabase-js": "^2.43.2",
     "emoji-picker-react": "^4.9.2",
     "lenis": "^1.0.45",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
+    "ola": "^1.2.1",
     "react": "^18",
     "react-animated-modal": "^1.1.1",
     "react-device-detect": "^2.2.3",

@@ -1,3 +1,5 @@
+"use client";
+
 import HeaderItem from "./HeaderItem";
 import Searchbar from "./Searchbar";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -13,7 +15,7 @@ const Header = () => {
       <MobileHeaderProfile />
       <Searchbar />
       <div className="flex gap-[1rem] md:gap-[0.75rem] ml-[1rem] md:m-0">
-        <ToggleDarkModeBtn />
+        {/* <ToggleDarkModeBtn /> */}
         <HeaderItem
           cln="hidden md:flex"
           icon={

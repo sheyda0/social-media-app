@@ -15,7 +15,7 @@ const Registration = () => {
   return (
     <>
       <ScrollSpace />
-      <div className="h-[100vh] w-[100vw] overflow-y-hidden">
+      <div className="h-[100vh] w-[100vw] overflow-y-hidden z-[1000] relative">
         <div
           className={`cont ${
             showSignUp && "s--signup"

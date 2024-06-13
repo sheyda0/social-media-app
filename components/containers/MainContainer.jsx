@@ -13,10 +13,6 @@ const MainContainer = ({ children, cln }) => {
         content: containerRef.current.firstChild, // Specify the scrollable content
       });
 
-      lenis.on("scroll", (e) => {
-        console.log(e);
-      });
-
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
@@ -24,7 +20,6 @@ const MainContainer = ({ children, cln }) => {
 
       requestAnimationFrame(raf);
 
-      // Cleanup on unmount
       return () => {
         lenis.destroy();
       };

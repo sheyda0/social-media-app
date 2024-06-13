@@ -18,15 +18,15 @@ import { isMobile } from "react-device-detect";
 
 const Sidebar = () => {
   return (
-    <div className="h-[5rem] md:relative rounded-t-[1rem] md:rounded-none flex items-center justify-between md:block w-full md:h-[100vh] md:w-[22%] px-[2rem] md:px-[3.125rem] fixed left-0 bottom-0 z-50">
+    <div className="h-[5rem] lg:relative rounded-t-[1rem] lg:rounded-none flex items-center justify-between lg:block w-full lg:h-[100vh] lg:w-[22%] px-[2rem] lg:px-[3.125rem] fixed left-0 bottom-0 z-[100]">
       {/* <Logo /> */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <SidebarUserProfile />
       </div>
 
       <div className="w-full">
-        <Title cln="hidden md:block">menu</Title>
-        <div className="flex md:block w-full justify-between">
+        <Title cln="hidden lg:block">menu</Title>
+        <div className="flex lg:block w-full justify-between">
           <SidebarItem
             path="/home"
             icon={HomeIcon}
@@ -39,7 +39,7 @@ const Sidebar = () => {
             activeIcon={PeopleActiveIcon}
             label="People"
           />
-          <div className="w-[3rem] bg-dark-gray flex items-center justify-center rounded-full md:hidden">
+          <div className="w-[3rem] bg-dark-gray flex items-center justify-center rounded-full lg:hidden">
             <FaPlus color="#9798ad" size={24} />
           </div>
           {isMobile ? (

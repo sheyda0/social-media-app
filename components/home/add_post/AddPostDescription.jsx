@@ -7,11 +7,13 @@ import EmojiPicker from "emoji-picker-react";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import {
+  addNewPost,
   resetImage,
   setAddPostDescription,
 } from "@/redux/features/add_post/addPostSlice";
 import { IoCloseOutline } from "react-icons/io5";
 import { MdOutlineModeEdit } from "react-icons/md";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
 
 const AddPostDescription = ({ handleShowEditor }) => {
   const [openEmojiPicker, setOpenEmojiPicker] = useState(false);
@@ -56,6 +58,10 @@ const AddPostDescription = ({ handleShowEditor }) => {
     textareaRef.current.selectionStart = newPosition;
     textareaRef.current.selectionEnd = newPosition;
     textareaRef.current.focus();
+  };
+
+  const handleAddPost = () => {
+    dispatch(addNewPost());
   };
 
   return (
@@ -195,6 +201,11 @@ const AddPostDescription = ({ handleShowEditor }) => {
                 </svg>
               </div>
             )}
+            <div className="w-full flex justify-end">
+              <PrimaryButton cln="w-[8rem] mt-[2rem]" onClick={handleAddPost}>
+                Post
+              </PrimaryButton>
+            </div>
           </div>
         </>
       </div>

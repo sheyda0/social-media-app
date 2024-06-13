@@ -7,6 +7,7 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { LuSend } from "react-icons/lu";
 import { RiBookmarkLine } from "react-icons/ri";
 import { RiBookmarkFill } from "react-icons/ri";
+import LikeButton from "./like-button/LikeButton";
 
 const PostFooter = ({ handleShowComments }) => {
   const [like, setLike] = useState(false);
@@ -21,12 +22,11 @@ const PostFooter = ({ handleShowComments }) => {
   };
 
   return (
-    <div>
-      <div className="mt-[1rem] flex items-center justify-between">
-        <div className="flex items-center gap-[1rem]">
+    <div className="relative">
+      <div className="mt-[1rem] flex items-center justify-between relative">
+        <div className="flex items-center">
           {/* like */}
-          <button onClick={handleLikePost}>
-            {like ? (
+          {/* {like ? (
               <HiHeart
                 size={24}
                 className="text-dark-gray dark:text-[#d6d6d6]"
@@ -36,33 +36,39 @@ const PostFooter = ({ handleShowComments }) => {
                 size={24}
                 className="text-dark-gray dark:text-[#d6d6d6]"
               />
-            )}
-          </button>
+            )} */}
 
-          {/* comment */}
-          <button onClick={handleShowComments}>
-            <BiMessageSquareDetail
-              size={20}
-              className="text-dark-gray dark:text-[#d6d6d6]"
-            />
-          </button>
+          <LikeButton cln={like ? "is-active" : ""} onClick={handleLikePost} />
 
-          {/* share */}
-          <button>
-            <LuSend size={20} className="text-dark-gray dark:text-[#d6d6d6]" />
-          </button>
+          <div className="flex items-center gap-[1rem] ml-[3.8rem] z-[51]">
+            {/* comment */}
+            <button onClick={handleShowComments}>
+              <BiMessageSquareDetail
+                size={27}
+                className="text-dark-gray dark:text-[#d6d6d6]"
+              />
+            </button>
+
+            {/* share */}
+            <button>
+              <LuSend
+                size={27}
+                className="text-dark-gray dark:text-[#d6d6d6]"
+              />
+            </button>
+          </div>
         </div>
 
         {/* save */}
         <button onClick={handleSavePost}>
           {save ? (
             <RiBookmarkFill
-              size={20}
+              size={27}
               className="text-dark-gray dark:text-[#d6d6d6]"
             />
           ) : (
             <RiBookmarkLine
-              size={20}
+              size={27}
               className="text-dark-gray dark:text-[#d6d6d6]"
             />
           )}

@@ -5,7 +5,7 @@ import { GoChevronRight } from "react-icons/go";
 
 const RightSidebar = () => {
   return (
-    <div className="h-[100vh] w-[22%] px-[3.125rem] hidden md:block">
+    <div className="h-[100vh] w-[22%] px-[3.125rem] hidden lg:block">
       <div className="mt-[1.875rem]">
         <div className="flex items-center justify-between">
           <Title>suggested for you</Title>

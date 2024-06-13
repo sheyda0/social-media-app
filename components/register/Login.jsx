@@ -1,62 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import PrimaryButton from "../buttons/PrimaryButton";
 import Input from "../inputs/Input";
 import SeparatorWithText from "../SeparatorWithText";
 import RegisterFormTitle from "./RegisterFormTitle";
 import SocialLoginButton from "./SocialLoginButton";
 import { FiGithub } from "react-icons/fi";
 import { SiGoogle } from "react-icons/si";
-import { useLoginMutation } from "@/redux/features/auth/authApiSlice";
-import { useDispatch } from "react-redux";
-import { setCredentials } from "@/redux/features/auth/authSlice";
+import GalaxyButton from "../buttons/galaxy-button/GalaxyButton";
+import signInWithGoogle, { login } from "@/utils/supabase/authActions";
 import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
-
-  const [login, { isLoading }] = useLoginMutation();
-  const dispatch = useDispatch();
   const router = useRouter();
 
-  useEffect(() => {
-    setErrorMsg("");
-  }, [username, password]);
+  async function handleSignInWithGoogle(response) {
+    const { data, error } = await supabase.auth.signInWithIdToken({
+      provider: "google",
+      token: response.credential,
+    });
 
-  const handleUsernameInput = (e) => setUsername(e.target.value);
-  const handlePasswordInput = (e) => setPassword(e.target.value);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    router.push("/home");
-
-    // try {
-    //   const userData = await login({ username, password }.unwrap());
-    //   dispatch(setCredentials({ ...userData, user }));
-    //   setUsername("");
-    //   setPassword("");
-    //   redirect("/home");
-    // } catch (error) {
-    //   if (!error?.originalStatus) {
-    //     setErrorMsg("No Server Response");
-    //   } else if (error.originalStatus === 400) {
-    //     setErrorMsg("Missing Username or Password");
-    //   } else if (error.originalStatus === 401) {
-    //     setErrorMsg("Unauthorized");
-    //   } else {
-    //     setErrorMsg("Login Failed");
-    //   }
-    //   errRef.current.focus();
-    //   console.log(error);
-    // }
-  };
+    if (data) {
+      console.log(data);
+      router.push("/home");
+    } else {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="form sign-in flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
+      <div
+        id="g_id_onload"
+        data-client_id="63749383748-cs9km8shvrltud2207vab36t7gv3ktb7.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-callback={handleSignInWithGoogle}
+        data-nonce=""
+        data-auto_select="true"
+        data-itp_support="true"
+        data-use_fedcm_for_prompt="true"
+      ></div>
+
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="outline"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left"
+      ></div>
+
       <div className="flex flex-col w-[75vw] md:w-[30rem]">
         <RegisterFormTitle title="Welcome back" sub="Sign in to your account" />
         <div className="flex flex-col gap-[1.5rem]">
@@ -67,30 +61,26 @@ const Login = () => {
           <SocialLoginButton
             icon={<SiGoogle size={17} color="#d6d6d6" />}
             text="Continue with Google"
+            onClick={signInWithGoogle}
           />
         </div>
         <SeparatorWithText>or</SeparatorWithText>
-        <form action="" className="flex flex-col" onSubmit={handleSubmit}>
+        <form action="" className="flex flex-col">
           <Input
-            placeholder="Email or Username"
-            type="text"
+            placeholder="Email"
             cln="mb-[1.5rem] w-full"
-            value={username}
-            onChange={handleUsernameInput}
             required={true}
+            name="email"
+            type="email"
           />
           <Input
             placeholder="Password"
+            name="password"
             type="password"
             cln="mb-[1.5rem] w-full"
-            value={password}
-            onChange={handlePasswordInput}
             required={true}
           />
-
-          <PrimaryButton cln="round btn-15-round text-[1.125rem] medium-height mt-[2rem]">
-            Sign In
-          </PrimaryButton>
+          <GalaxyButton formAction={login}>Sign In</GalaxyButton>
         </form>
       </div>
     </div>

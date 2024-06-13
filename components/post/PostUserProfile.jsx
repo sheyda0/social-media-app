@@ -1,24 +1,25 @@
 import Image from "next/image";
 import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Username from "../Username";
+import Link from "next/link";
 
-const PostUserProfile = () => {
+const PostUserProfile = ({ user }) => {
   return (
-    <div className="flex gap-[1rem]">
+    <Link href="/" className="flex gap-[1rem]">
       <Image
-        src={ProfileImage}
+        src={user.profile}
         width={60}
         height={60}
         className="rounded-full"
         alt=""
       />
       <div className="mt-[1rem]">
-        <Username>tom odell</Username>
+        <Username>{user.name}</Username>
         <span className="text-gray font-semibold text-[0.75rem] capitalize">
           5 minutes ago
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 

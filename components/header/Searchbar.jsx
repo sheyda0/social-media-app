@@ -12,6 +12,7 @@ const Searchbar = () => {
         type="text"
         placeholder="Search Here..."
         cln="md:w-[30rem] w-[16rem]"
+        noBorder={true}
       />
       <Image
         src={ExploreActiveIcon}

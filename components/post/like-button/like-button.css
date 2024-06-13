@@ -1,0 +1,35 @@
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  transform: translate(-50%, -50%);
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.heart.is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.stage {
+  position: absolute;
+  bottom: -6.5rem;
+  left: 1.3rem;
+}
+
+@media screen and (min-width: 1600px) {
+  .stage {
+    position: absolute;
+    bottom: -2.2rem;
+    left: -1.6rem;
+  }
+}
+
+/*# sourceMappingURL=like-button.css.map */

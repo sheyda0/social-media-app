@@ -9,7 +9,7 @@ const FollowerItem = () => {
     <>
       <Link
         href="/profile"
-        className="pl-[0.875rem] pr-[1.25rem] w-full text-gray bg-light-white dark:bg-[#141520] round py-[0.875rem] flex justify-between items-center"
+        className="pl-[0.875rem] pr-[1.25rem] w-full text-gray round py-[0.875rem] flex justify-between items-center"
       >
         <div className="flex gap-[0.75rem]">
           <Image

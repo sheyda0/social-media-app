@@ -1,19 +1,26 @@
 "use client";
 
 import Registration from "@/components/register/Registration";
-import { selectCurrentToken } from "@/redux/features/auth/authSlice";
-import { redirect } from "next/navigation";
+import { isLogin } from "@/utils/supabase/authActions";
+import { createClient } from "@/utils/supabase/client";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 
-export default function Home() {
-  const token = useSelector(selectCurrentToken);
+export default function RegistrationPage() {
+  const supabase = createClient();
+  const router = useRouter();
 
   useEffect(() => {
-    if (token) {
-      redirect("/home");
-    }
-  }, [token]);
+    isLogin()
+      .then((isLoggedIn) => {
+        if (isLoggedIn) {
+          router.push("/home");
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking login status:", error);
+      });
+  }, [supabase, router]);
 
   return <Registration />;
 }

@@ -30,7 +30,7 @@ body {
   font-family: "Alata", sans-serif !important;
   font-weight: 400;
   font-style: normal;
-  cursor: none;
+  // cursor: none;
 }
 
 @media screen and (max-width: 1710px) {
@@ -600,23 +600,29 @@ body {
 }
 
 .absolute-shadow-purple {
-  box-shadow: 0px 0px 300px 20px rgba(51, 7, 81, 1);
-  background: rgba(51, 7, 81, 0.3);
+  box-shadow: 0px 0px 150px 20px rgba(51, 7, 81, 1);
+  background: rgba(51, 7, 81, 0.45);
 }
 
 .absolute-shadow-blue {
-  box-shadow: 0px 0px 300px 20px rgba(36, 18, 154, 1);
-  background: rgba(36, 18, 154, 0.15);
+  box-shadow: 0px 0px 150px 20px rgba(36, 18, 154, 1);
+  background: rgba(36, 18, 154, 0.25);
 }
 
 .absolute-shadow-purple-sm {
-  box-shadow: 0px 0px 300px 20px rgba(51, 7, 81, 1);
-  background: rgba(51, 7, 81, 0.19);
+  box-shadow: 0px 0px 150px 20px rgba(51, 7, 81, 1);
+  background: rgba(51, 7, 81, 0.22);
 }
 
 .absolute-shadow-blue-sm {
-  box-shadow: 0px 0px 300px 20px rgba(36, 18, 154, 1);
-  background: rgba(36, 18, 154, 0.1);
+  box-shadow: 0px 0px 150px 20px rgba(36, 18, 154, 1);
+  background: rgba(36, 18, 154, 0.19);
+}
+
+.absolute-shadow-light-blue {
+  box-shadow: 0px 0px 120px 10px rgba(04, 184, 226, 1);
+  background: rgba(04, 184, 226, 0.13);
+  // color: #121c36;
 }
 
 /* cursor */

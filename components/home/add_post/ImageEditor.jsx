@@ -69,10 +69,10 @@ const ImageEditor = ({ handleHideEditor, showEditor }) => {
                 onChange={onImageInputChange}
                 id="addPostImageUpload"
               />
-              <PrimaryButton cln="mt-[1rem] round h-[2rem]">
+              <PrimaryButton cln="mt-[1rem] round h-[2rem] min-[1600px]:relative min-[1600px]:w-[13rem]">
                 <label
                   for="addPostImageUpload"
-                  className="px-[1rem] py-[0.6rem]"
+                  className="px-[1rem] py-[0.6rem] text-[1rem] min-[1600px]:absolute min-[1600px]:top-[-9px] left-[5px]"
                 >
                   Upload from computer
                 </label>

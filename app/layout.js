@@ -4,6 +4,7 @@ import ReduxProvider from "@/redux/provider";
 import AbsoluteShadow from "@/components/utils/AbsoluteShadow";
 import Cursor from "@/components/utils/Cursor";
 import ScrollSpace from "@/components/register/ScrollSpace";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,18 +15,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className="font-alata">
-        <Cursor />
-        <div class="cursor"></div>
-        <div class="cursor2"></div>
+        {/* <Cursor /> */}
+        {/* <div className="cursor"></div>
+        <div className="cursor2"></div> */}
         <div className="main"></div>
         <AbsoluteShadow cln="top-[20rem] left-[30rem] absolute-shadow-purple w-[10rem] h-[10rem]" />
         <AbsoluteShadow cln="top-[15rem] left-[20rem] absolute-shadow-blue w-[6rem] h-[6rem]" />
+
+        <AbsoluteShadow cln="top-[45%] left-[60%] absolute-shadow-light-blue w-[3rem] h-[3rem]" />
+        <AbsoluteShadow cln="top-[80%] left-[35%] absolute-shadow-light-blue w-[3rem] h-[3rem]" />
 
         <AbsoluteShadow cln="bottom-[5rem] right-[15rem] absolute-shadow-purple-sm w-[5rem] h-[5rem]" />
         <AbsoluteShadow cln="bottom-[5rem] right-[26rem] absolute-shadow-blue-sm w-[3rem] h-[3rem]" />
 
         <ReduxProvider>{children}</ReduxProvider>
       </body>
+      <Script src="https://accounts.google.com/gsi/client" async></Script>
     </html>
   );
 }
