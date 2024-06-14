@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import SecondaryInput from "../inputs/SecondaryInput";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import { useState } from "react";
 
 const PostAddComment = ({ cln }) => {
@@ -22,7 +21,7 @@ const PostAddComment = ({ cln }) => {
     >
       <div>
         <Image
-          src={ProfileImage}
+          src="/images/wepik-export-20231128203407BKL1.jpeg"
           width={55}
           height={55}
           className="rounded-full"

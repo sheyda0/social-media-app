@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import RocketIcon from "../../../assets/images/rocket (3).png";
 import { getImgData } from "@/utils/utils";
 import { useEffect, useState } from "react";
 import CloseModalBtn from "@/components/modal/CloseModalBtn";
@@ -54,7 +53,7 @@ const ImageEditor = ({ handleHideEditor, showEditor }) => {
           <CloseModalBtn onClick={handleHideEditor} />
         </div>
         <div className="w-full h-full flex flex-col justify-center items-center text-gray text-[2.5rem]">
-          <Image src={RocketIcon} width={140} height={140} alt="" />
+          <Image src="/images/rocket (3).png" width={140} height={140} alt="" />
 
           <div className="flex flex-col justify-center gap-[0.5rem] items-center">
             <p className="text-[1.5rem] mt-[1rem]">

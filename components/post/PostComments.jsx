@@ -1,15 +1,12 @@
 import { useState } from "react";
 import PostSingleComment from "./PostSingleComment";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
-import ProfileImage2 from "../../assets/images/handsome-confident-smiling-man-with-hands-crossed-chest.jpg";
-import ProfileImage3 from "../../assets/images/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg";
 import PostAddComment from "./PostAddComment";
 
 const comments = [
   {
     id: 1,
     username: "shey",
-    user_image: ProfileImage,
+    user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
     created_at: "2023-14-03",
     content:
       "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
@@ -17,14 +14,14 @@ const comments = [
       {
         id: 2,
         username: "ali",
-        user_image: ProfileImage2,
+        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
         created_at: "2023-14-03",
         content: "Follow for more Amazing tips",
       },
       {
         id: 3,
         username: "hana",
-        user_image: ProfileImage3,
+        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
         created_at: "2023-14-03",
         content: "Follow for more Amazing tips",
       },
@@ -33,7 +30,7 @@ const comments = [
   {
     id: 1,
     username: "shey",
-    user_image: ProfileImage,
+    user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
     created_at: "2023-14-03",
     content:
       "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
@@ -41,7 +38,7 @@ const comments = [
       {
         id: 2,
         username: "ali",
-        user_image: ProfileImage2,
+        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
         created_at: "2023-14-03",
         content: "Follow for more Amazing tips",
       },

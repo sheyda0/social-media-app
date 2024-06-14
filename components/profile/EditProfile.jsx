@@ -3,8 +3,6 @@
 import Input from "../inputs/Input";
 import PrimaryButton from "../buttons/PrimaryButton";
 import { useState } from "react";
-import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
-import ProfileTemplate from "../../assets/images/44884218_345707102882519_2446069589734326272_n.jpg";
 import FileInput from "../inputs/FileInput";
 import Image from "next/image";
 import { LuTrash2 } from "react-icons/lu";
@@ -21,7 +19,9 @@ const EditProfile = () => {
   const [email, setEmail] = useState("");
 
   const handleRemovePhoto = () => {
-    setProfileImage(ProfileTemplate);
+    setProfileImage(
+      "/images/44884218_345707102882519_2446069589734326272_n.jpg"
+    );
   };
 
   const handleSubmit = (e) => {
@@ -48,7 +48,7 @@ const EditProfile = () => {
           <div className="flex gap-[2rem] md:gap-[4rem]">
             <div className="flex items-center pr-[10rem] relative w-full h-full">
               <Image
-                src={profileImage}
+                src="/images/wepik-export-20231128203407BKL1.jpeg"
                 fill
                 className="rounded-full object-cover min-w-[10rem] md:min-w-[12.5rem] min-h-[10rem] md:min-h-[12.5rem]"
                 alt=""

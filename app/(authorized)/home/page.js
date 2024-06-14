@@ -1,14 +1,8 @@
-"use client";
-
 import Home from "@/components/home/Home";
-import { isLogin } from "@/utils/supabase/authActions";
-import { createClient } from "@/utils/supabase/client";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
-export default function HomePage() {
-  const supabase = createClient();
-  const router = useRouter();
+const page = () => {
+  // const supabase = createClient();
+  // const router = useRouter();
 
   // useEffect(() => {
   //   isLogin()
@@ -24,4 +18,6 @@ export default function HomePage() {
   // }, [supabase, router]);
 
   return <Home />;
-}
+};
+
+export default page;

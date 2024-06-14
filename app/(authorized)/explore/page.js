@@ -1,5 +1,5 @@
-const page = () => {
-  return <div>explore</div>;
-};
+"use client";
 
-export default page;
+export default function Page({ repo }) {
+  return <div>explore</div>;
+}

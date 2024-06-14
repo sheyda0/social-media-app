@@ -1,7 +1,6 @@
 "use client";
 
 import SmallProfileImage from "../../SmallProfileImage";
-import ProfileImage from "../../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import { useDispatch } from "react-redux";
 import { openModal } from "@/redux/features/modal/modalSlice";
 import BlurContainer from "../../containers/BlurContainer";
@@ -51,7 +50,7 @@ const AddPost = () => {
         <button className="w-full h-full round">
           <div className="!w-full !h-full pl-[1rem] pr-[2rem] flex items-center justify-between text-gray font-semibold round">
             <div className="flex items-center gap-[1rem]">
-              <SmallProfileImage img={ProfileImage} />
+              <SmallProfileImage img="/images/wepik-export-20231128203407BKL1.jpeg" />
               <span className="text-[1.125rem]">Start a post</span>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Link from "next/link";
 import SecondaryBorderedBtn from "../buttons/SecondaryBorderedBtn";
 import SecondaryButton from "../buttons/SecondaryButton";
@@ -13,7 +12,7 @@ const FollowerItem = () => {
       >
         <div className="flex gap-[0.75rem]">
           <Image
-            src={Profile}
+            src="/images/wepik-export-20231128203407BKL1.jpeg"
             width={55}
             height={55}
             className="round"

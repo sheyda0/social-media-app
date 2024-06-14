@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import EditProfileButton from "./EditProfileButton";
 import { isMobile } from "react-device-detect";
 import { openModal } from "@/redux/features/modal/modalSlice";
@@ -23,7 +22,7 @@ const ProfileInfo = () => {
       <div className="flex w-full gap-[2rem]">
         <button className="rounded-full relative w-[7rem] md:w-[11rem] h-[7rem] md:h-[11rem]">
           <Image
-            src={ProfileImage}
+            src="/images/wepik-export-20231128203407BKL1.jpeg"
             fill
             className="rounded-full object-cover w-full h-full"
             alt=""

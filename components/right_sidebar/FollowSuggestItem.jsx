@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Link from "next/link";
 import PrimaryButton from "../buttons/PrimaryButton";
 import BlurContainer from "../containers/BlurContainer";
@@ -12,7 +11,7 @@ const FollowSuggestItem = () => {
           <div className="w-[4.2rem] relative h-[4.2rem]">
             <Link href="/">
               <Image
-                src={ProfileImage}
+                src="/images/wepik-export-20231128203407BKL1.jpeg"
                 fill
                 className="object-cover rounded-full"
                 alt=""

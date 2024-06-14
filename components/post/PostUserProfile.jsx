@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProfileImage from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import Username from "../Username";
 import Link from "next/link";
 

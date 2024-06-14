@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Profile from "../../assets/images/wepik-export-20231128203407BKL1.jpeg";
 import { GoChevronRight } from "react-icons/go";
 import Link from "next/link";
 import BlurContainer from "../containers/BlurContainer";
@@ -37,7 +36,7 @@ const SidebarUserProfile = () => {
         <BlurContainer cln="pl-[0.875rem] raise round pr-[1.25rem] text-gray py-[0.875rem] mb-[4.375rem] mt-[1.875rem] flex justify-between items-center">
           <div className="flex gap-[0.75rem]">
             <Image
-              src={Profile}
+              src="/images/wepik-export-20231128203407BKL1.jpeg"
               width={55}
               height={55}
               className="round"
