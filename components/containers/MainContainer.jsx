@@ -31,7 +31,7 @@ const MainContainer = ({ children, cln }) => {
       ref={containerRef}
       className={`${
         cln ? cln : ""
-      } h-[100vh] w-full container-height flex flex-col items-center overflow-y-visible overflow-x-hidden mt-[1rem]`}
+      } w-full flex flex-col items-center overflow-y-auto overflow-x-hidden mt-[1rem]`}
     >
       {children}
     </div>

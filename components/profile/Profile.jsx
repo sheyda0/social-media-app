@@ -20,7 +20,7 @@ const Profile = () => {
   };
 
   return (
-    <MainContainer cln="pb-[2rem]">
+    <MainContainer cln="pb-[2rem] mt-[5rem]">
       <div className="flex flex-col md:flex-row items-center justify-between w-full">
         <ProfileInfo />
         <div className="flex flex-col w-full md:w-1/2 justify-between md:justify-center items-center gap-[2rem] md:pr-[3rem]">
@@ -34,8 +34,8 @@ const Profile = () => {
       </div>
       {/* posts */}
       <PostsContainer>
-        <Post />
-        <Post />
+        {/* <Post />
+        <Post /> */}
       </PostsContainer>
       {isOpen && <EditProfile />}
     </MainContainer>

@@ -17,11 +17,11 @@ const Post = ({ image, description, author, likes }) => {
   };
 
   return (
-    <BlurContainer cln="w-full md:w-[70%] round p-[0.7rem] md:p-[1.5rem] pb-[1rem] post z-50 min-h-[50rem]">
+    <BlurContainer cln="w-full md:w-[70%] round p-[0.7rem] md:p-[1.5rem] pb-[1rem] post z-50 mx-auto mt-[2rem]">
       <div className="relative w-full h-full">
         <PostUserProfile user={author} />
-        <PostCaption text={description} />
-        <PostImage image={image} />
+        {description && <PostCaption text={description} />}
+        {image && <PostImage image={image} />}
         <PostFooter handleShowComments={handleShowComments} likes={likes} />
         {showComments && (
           <div>

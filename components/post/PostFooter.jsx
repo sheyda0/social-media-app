@@ -9,7 +9,7 @@ import { RiBookmarkLine } from "react-icons/ri";
 import { RiBookmarkFill } from "react-icons/ri";
 import LikeButton from "./like-button/LikeButton";
 
-const PostFooter = ({ handleShowComments }) => {
+const PostFooter = ({ handleShowComments, likes }) => {
   const [like, setLike] = useState(false);
   const [save, setSave] = useState(false);
 
@@ -25,19 +25,6 @@ const PostFooter = ({ handleShowComments }) => {
     <div className="relative">
       <div className="mt-[1rem] flex items-center justify-between relative">
         <div className="flex items-center">
-          {/* like */}
-          {/* {like ? (
-              <HiHeart
-                size={24}
-                className="text-dark-gray dark:text-[#d6d6d6]"
-              />
-            ) : (
-              <HiOutlineHeart
-                size={24}
-                className="text-dark-gray dark:text-[#d6d6d6]"
-              />
-            )} */}
-
           <LikeButton cln={like ? "is-active" : ""} onClick={handleLikePost} />
 
           <div className="flex items-center gap-[1rem] ml-[3.8rem] z-[51]">
@@ -76,7 +63,7 @@ const PostFooter = ({ handleShowComments }) => {
       </div>
       <div className="flex items-center justify-between w-full mt-[0.5rem]">
         <span className="text-gray font-semibold text-[0.875rem] capitalize">
-          30 likes
+          {likes > 0 ? `${likes} likes` : likes > 1 ? `${likes} like` : ""}
         </span>
         <span className="text-gray font-semibold text-[0.875rem] capitalize">
           5 comments

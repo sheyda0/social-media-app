@@ -26,9 +26,15 @@
   left: 1.3rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .stage {
+    bottom: 0;
+    left: -1.6rem;
+  }
+}
+
 @media screen and (min-width: 1600px) {
   .stage {
-    position: absolute;
     bottom: -2.2rem;
     left: -1.6rem;
   }

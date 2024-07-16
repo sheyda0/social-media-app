@@ -12,7 +12,9 @@ import CloseModalBtn from "../modal/CloseModalBtn";
 import ModalContainer from "../modal/ModalContainer";
 
 const EditProfile = () => {
-  const [profileImage, setProfileImage] = useState(Profile);
+  const [profileImage, setProfileImage] = useState(
+    "/images/wepik-export-20231128203407BKL1.jpeg"
+  );
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [bio, setBio] = useState("");

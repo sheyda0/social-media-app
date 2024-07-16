@@ -9,21 +9,23 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const sortedPosts = useSelector(selectSortedPosts);
+  const { isOpen } = useSelector((state) => state.modal);
 
   return (
-    <MainContainer>
+    <div className={isOpen ? "overflow-hidden" : "overflow-visible"}>
       <AddPost />
-
-      {sortedPosts.map((post) => (
-        <Post
-          key={post.id}
-          image={post.image}
-          description={post.description}
-          author={post.author}
-          likes={post.likes}
-        />
-      ))}
-    </MainContainer>
+      <div className="mx-auto">
+        {sortedPosts.map((post) => (
+          <Post
+            key={post.id}
+            image={post.image}
+            description={post.description}
+            author={post.author}
+            likes={post.likes}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

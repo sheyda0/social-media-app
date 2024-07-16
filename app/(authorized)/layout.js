@@ -6,11 +6,11 @@ import Sidebar from "@/components/sidebar/Sidebar";
 export default function MainLayout({ children }) {
   return (
     // <Providers>
-    <div className="flex flex-col-reverse lg:flex-row w-full h-[100vh] lg:h-full justify-between">
+    <div className="flex flex-col-reverse lg:flex-row w-full lg:h-full justify-between">
       <Sidebar />
-      <div className="flex flex-col px-[1rem] lg:px-[1.875rem] w-full !h-[100vh] lg:w-[60%] pb-[5rem] lg:pb-0">
+      <div className="flex flex-col px-[1rem] lg:px-[1.875rem] w-full lg:w-[60%] pb-[5rem] lg:pb-0 z-[10]">
         <Header />
-        <div className="w-full h-[88.5vh]">{children}</div>
+        <div className="w-full">{children}</div>
       </div>
       <RightSidebar />
     </div>

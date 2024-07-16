@@ -12,12 +12,11 @@ import {
   setAddPostDescription,
 } from "@/redux/features/add_post/addPostSlice";
 import { IoCloseOutline } from "react-icons/io5";
-import { MdOutlineModeEdit } from "react-icons/md";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import { closeModal } from "@/redux/features/modal/modalSlice";
 
 const AddPostDescription = ({ handleShowEditor }) => {
   const [openEmojiPicker, setOpenEmojiPicker] = useState(false);
-  let selectedEmoji = useState("");
   const [cursorPosition, setCursorPosition] = useState(0);
   const textareaRef = useRef(null);
 
@@ -62,6 +61,7 @@ const AddPostDescription = ({ handleShowEditor }) => {
 
   const handleAddPost = () => {
     dispatch(addNewPost());
+    dispatch(closeModal());
   };
 
   return (

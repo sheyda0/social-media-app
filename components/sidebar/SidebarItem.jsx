@@ -1,6 +1,7 @@
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
+import { isMobile } from "react-device-detect";
 import Image from "next/image";
 
 const SidebarItem = ({ path, icon, activeIcon, label }) => {
@@ -16,14 +17,14 @@ const SidebarItem = ({ path, icon, activeIcon, label }) => {
     >
       <div
         className={`flex items-center justify-between w-full h-full ${
-          !isActive && "borderb-gray"
+          !isActive && !isMobile && "borderb-gray"
         }`}
       >
         <div className="flex items-center gap-[0.625rem]">
           {isActive && icon ? (
-            <Image src={activeIcon} width={20} height={20} alt="" />
+            <Image src={activeIcon} width={22} height={22} alt="" />
           ) : !isActive && icon ? (
-            <Image src={icon} width={20} height={20} alt="" />
+            <Image src={icon} width={22} height={22} alt="" />
           ) : (
             <div></div>
           )}

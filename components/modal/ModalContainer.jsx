@@ -24,7 +24,7 @@ export default function ModalContainer({
   return (
     <>
       <div
-        className={`absolute top-0 left-0 bottom-0 bg-[#080F1F] opacity-70 w-full z-[51] transition-all duration-700 ${
+        className={`fixed top-0 left-0 bottom-0 bg-[#080F1F] opacity-70 w-full z-[101] transition-all duration-700 ${
           isOpen ? "h-full" : "h-0"
         } ${backdropCln}`}
         onClick={handleCloseModal}
@@ -33,7 +33,7 @@ export default function ModalContainer({
         onClick={onModalClick}
         className={`${cln ? cln : ""} ${
           isOpen ? "translate-y-0" : "translate-y-[-200%]"
-        } z-[60] transition-all duration-700 inset-0 absolute shadow-lg round bg-[#0B1020] top-[5%] left-[1.7rem] md:left-[27%] w-[89vw] md:w-[60rem] h-[65vh] md:h-[60vh]`}
+        } transition-all duration-700 inset-0 absolute shadow-lg round bg-[#0B1020] top-[5%] left-[1.7rem] md:left-[27%] w-[89vw] md:w-[60rem] h-[65vh] md:h-[60vh] z-[102]`}
       >
         {children}
       </div>
