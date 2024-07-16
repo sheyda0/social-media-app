@@ -5,10 +5,7 @@ import { useDispatch } from "react-redux";
 import { openModal } from "@/redux/features/modal/modalSlice";
 import BlurContainer from "../../containers/BlurContainer";
 import AddPostModal from "./AddPostModal";
-import { useEffect, useState } from "react";
-import { createClient } from "@/utils/supabase/client";
-import { useRouter } from "next/navigation";
-import { isLogin, userData } from "@/utils/supabase/authActions";
+import { useState } from "react";
 
 const AddPost = () => {
   const [showEditor, setShowEditor] = useState(false);
@@ -28,9 +25,6 @@ const AddPost = () => {
   const handleHideEditor = () => {
     setShowEditor(false);
   };
-
-  const supabase = createClient();
-  const router = useRouter();
 
   return (
     <>

@@ -24,7 +24,7 @@ export default function ModalContainer({
   return (
     <>
       <div
-        className={`absolute top-0 left-0 bottom-0 bg-[#080F1F] opacity-70 w-full z-50 transition-all duration-700 ${
+        className={`absolute top-0 left-0 bottom-0 bg-[#080F1F] opacity-70 w-full z-[51] transition-all duration-700 ${
           isOpen ? "h-full" : "h-0"
         } ${backdropCln}`}
         onClick={handleCloseModal}

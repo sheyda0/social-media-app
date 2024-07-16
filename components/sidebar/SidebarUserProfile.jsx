@@ -4,32 +4,8 @@ import Image from "next/image";
 import { GoChevronRight } from "react-icons/go";
 import Link from "next/link";
 import BlurContainer from "../containers/BlurContainer";
-import UserProfileMenu from "./UserProfileMenu";
-import { createClient } from "@/utils/supabase/server";
-import { useEffect, useState } from "react";
-import { userData } from "@/utils/supabase/authActions";
 
 const SidebarUserProfile = () => {
-  const [userId, setUserId] = useState("");
-  const supabase = createClient();
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     await userData()
-  //       .then((data) => {
-  //         // setUserId(data);
-  //         console.log(data);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error checking login status:", error);
-  //       });
-  //   }
-
-  //   fetchData();
-  // }, []);
-
-  // console.log(userId);
-
   return (
     <div className="relative">
       <Link href="/profile">
@@ -54,8 +30,6 @@ const SidebarUserProfile = () => {
           <GoChevronRight size={20} />
         </BlurContainer>
       </Link>
-
-      <UserProfileMenu />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import SecondaryBorderedBtn from "../buttons/SecondaryBorderedBtn";
-import SecondaryButton from "../buttons/SecondaryButton";
+// import SecondaryBorderedBtn from "../buttons/SecondaryBorderedBtn";
+// import SecondaryButton from "../buttons/SecondaryButton";
 
 const FollowerItem = () => {
   return (
@@ -28,12 +28,12 @@ const FollowerItem = () => {
           </div>
         </div>
         <div className="flex items-center gap-[1rem]">
-          <SecondaryBorderedBtn cln="px-[1rem] py-[0.3rem] text-[0.875rem]">
+          {/* <SecondaryBorderedBtn cln="px-[1rem] py-[0.3rem] text-[0.875rem]">
             Remove
           </SecondaryBorderedBtn>
           <SecondaryButton cln="px-[1rem] py-[0.3rem] text-[0.875rem]">
             Message
-          </SecondaryButton>
+          </SecondaryButton> */}
         </div>
       </Link>
       {/* <div className="px-[5rem]">

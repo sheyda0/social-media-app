@@ -7,7 +7,7 @@ const initialState = {
     {
       id: 1,
       author: {
-        name: "Olivia Rodrigo",
+        name: "Olivia Rodrigo 1",
         profile: "/images/wepik-export-20231128203407BKL1.jpeg",
       },
       image: "/images/shahadat-rahman-voM1Z9cGPCU-unsplash.jpg",
@@ -19,6 +19,28 @@ const initialState = {
       id: 2,
       author: {
         name: "Olivia Rodrigo",
+        profile: "/images/wepik-export-20231128203407BKL1.jpeg",
+      },
+      image: "/images/shahadat-rahman-voM1Z9cGPCU-unsplash.jpg",
+      description:
+        "Notification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVGNotification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVGNotification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVG",
+      likes: 30,
+    },
+    {
+      id: 3,
+      author: {
+        name: "Olivia Rodrigo",
+        profile: "/images/wepik-export-20231128203407BKL1.jpeg",
+      },
+      image: "/images/shahadat-rahman-voM1Z9cGPCU-unsplash.jpg",
+      description:
+        "Notification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVGNotification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVGNotification Bell SVG Vector 18 Free Download Notification Bell 18 SVG vector file in monocolor and multicolor type for Sketch and Figma from Notification Bell 18 Vectors svg vector collection. Notification Bell 18 Vectors SVG",
+      likes: 30,
+    },
+    {
+      id: 4,
+      author: {
+        name: "Olivia Rodrigo 4",
         profile: "/images/wepik-export-20231128203407BKL1.jpeg",
       },
       image: "/images/shahadat-rahman-voM1Z9cGPCU-unsplash.jpg",
@@ -63,7 +85,11 @@ const addPostSlice = createSlice({
         image: state.image,
         description: state.description,
         likes: 5,
+        id: Date.now(),
       });
+    },
+    sortPosts(state) {
+      state.posts = [...state.posts].sort((a, b) => a.id - b.id);
     },
   },
   extraReducers: (builder) => {

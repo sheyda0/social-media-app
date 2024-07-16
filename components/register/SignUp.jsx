@@ -1,7 +1,6 @@
 import Input from "../inputs/Input";
 import RegisterFormTitle from "./RegisterFormTitle";
 import GalaxyButton from "../buttons/galaxy-button/GalaxyButton";
-import { signup } from "@/utils/supabase/authActions";
 
 const SignUp = () => {
   return (
@@ -22,7 +21,7 @@ const SignUp = () => {
           cln="mb-[1.5rem] w-full"
           required={true}
         />
-        <GalaxyButton formAction={signup}>Sign Up</GalaxyButton>
+        <GalaxyButton>Sign Up</GalaxyButton>
       </form>
     </div>
   );

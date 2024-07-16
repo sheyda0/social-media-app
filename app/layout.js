@@ -19,14 +19,14 @@ export default function RootLayout({ children }) {
         {/* <div className="cursor"></div>
         <div className="cursor2"></div> */}
         <div className="main"></div>
-        <AbsoluteShadow cln="top-[20rem] left-[30rem] absolute-shadow-purple w-[10rem] h-[10rem]" />
+        {/* <AbsoluteShadow cln="top-[20rem] left-[30rem] absolute-shadow-purple w-[10rem] h-[10rem]" />
         <AbsoluteShadow cln="top-[15rem] left-[20rem] absolute-shadow-blue w-[6rem] h-[6rem]" />
 
         <AbsoluteShadow cln="top-[45%] left-[60%] absolute-shadow-light-blue w-[3rem] h-[3rem]" />
         <AbsoluteShadow cln="top-[80%] left-[35%] absolute-shadow-light-blue w-[3rem] h-[3rem]" />
 
         <AbsoluteShadow cln="bottom-[5rem] right-[15rem] absolute-shadow-purple-sm w-[5rem] h-[5rem]" />
-        <AbsoluteShadow cln="bottom-[5rem] right-[26rem] absolute-shadow-blue-sm w-[3rem] h-[3rem]" />
+        <AbsoluteShadow cln="bottom-[5rem] right-[26rem] absolute-shadow-blue-sm w-[3rem] h-[3rem]" /> */}
 
         <ReduxProvider>{children}</ReduxProvider>
       </body>

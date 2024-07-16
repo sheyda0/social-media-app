@@ -16,7 +16,7 @@ const RegistrationSidebar = ({ onClick }) => {
         cln="m--in"
       />
 
-      <div className="w-full h-full absolute left-[-1.5rem] top-[50%]">
+      <div className="w-full h-full absolute left-[-1.5rem] top-[40%]">
         <div className="img__btn" onClick={onClick}>
           <PrimaryButton cln="m--up register-sidebar-btn !rounded-full">
             Sign Up
