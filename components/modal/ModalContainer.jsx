@@ -3,7 +3,6 @@
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../redux/features/modal/modalSlice";
 import { useSelector } from "react-redux";
-import Modal from "react-animated-modal";
 
 export default function ModalContainer({
   children,

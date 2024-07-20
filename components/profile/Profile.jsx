@@ -3,7 +3,6 @@
 import FollowItem from "./FollowItem";
 import ProfileInfo from "./ProfileInfo";
 import EditProfile from "./EditProfile";
-import Post from "../post/Post";
 import EditProfileButton from "./EditProfileButton";
 import { isMobile } from "react-device-detect";
 import MainContainer from "../containers/MainContainer";
