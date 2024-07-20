@@ -49,7 +49,7 @@ const ImageEditor = ({ handleHideEditor, showEditor }) => {
     <ModalContainer cln="p-[2rem] !h-[80vh] !md:w-[70vw] !md:left-[15%]">
       <div className="h-full relative">
         <div className="flex w-full justify-between items-center">
-          <h4 className="text-[1.5rem]">Editor</h4>
+          <h4 className="text-[1.5rem] text-white">Editor</h4>
           <CloseModalBtn onClick={handleHideEditor} />
         </div>
         <div className="w-full h-full flex flex-col justify-center items-center text-gray text-[2.5rem]">
@@ -70,7 +70,7 @@ const ImageEditor = ({ handleHideEditor, showEditor }) => {
               />
               <PrimaryButton cln="mt-[1rem] round h-[2rem] min-[1600px]:relative min-[1600px]:w-[13rem]">
                 <label
-                  for="addPostImageUpload"
+                  htmlFor="addPostImageUpload"
                   className="px-[1rem] py-[0.6rem] text-[1rem] min-[1600px]:absolute min-[1600px]:top-[-9px] left-[5px]"
                 >
                   Upload from computer

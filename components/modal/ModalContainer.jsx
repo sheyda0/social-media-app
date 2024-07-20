@@ -16,7 +16,7 @@ export default function ModalContainer({
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
-    onBackdropClick();
+    onBackdropClick && onBackdropClick();
     dispatch(closeModal());
     console.log("hii");
   };

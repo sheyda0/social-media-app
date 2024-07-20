@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const AddPost = () => {
   const [showEditor, setShowEditor] = useState(false);
-  const [userId, setUserId] = useState("");
 
   const dispatch = useDispatch();
 

@@ -1,5 +1,5 @@
 import Home from "@/components/home/Home";
 
-export default function Page({ repo }) {
+export default function Page() {
   return <Home />;
 }

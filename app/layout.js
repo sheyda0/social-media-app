@@ -1,9 +1,6 @@
 import "../assets/styles/globals.css";
 import "../assets/styles/colors.css";
 import ReduxProvider from "@/redux/provider";
-import AbsoluteShadow from "@/components/utils/AbsoluteShadow";
-import Cursor from "@/components/utils/Cursor";
-import ScrollSpace from "@/components/register/ScrollSpace";
 import Script from "next/script";
 import BackgroundShadows from "@/components/utils/BackgroundShadows";
 
