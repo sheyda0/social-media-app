@@ -1,8 +1,8 @@
 import "./galaxy-button.css";
 
-const GalaxyButton = ({ children, formAction }) => {
+const GalaxyButton = ({ children, formAction, onClick }) => {
   return (
-    <button className="btn third" formAction={formAction}>
+    <button className="btn third" formAction={formAction} onClick={onClick}>
       {children}
     </button>
   );

@@ -3,15 +3,20 @@
 import Image from "next/image";
 import SecondaryInput from "../inputs/SecondaryInput";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addComment } from "@/redux/features/post/postSlice";
 
-const PostAddComment = ({ cln }) => {
+const PostAddComment = ({ cln, id }) => {
   const [comment, setComment] = useState("");
+
+  const dispatch = useDispatch();
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
   };
 
   const handlePostComment = () => {
+    dispatch(addComment({ id, content: comment }));
     setComment("");
   };
 

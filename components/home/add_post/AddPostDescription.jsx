@@ -10,7 +10,7 @@ import {
   addNewPost,
   resetImage,
   setAddPostDescription,
-} from "@/redux/features/add_post/addPostSlice";
+} from "@/redux/features/post/postSlice";
 import { IoCloseOutline } from "react-icons/io5";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import { closeModal } from "@/redux/features/modal/modalSlice";
@@ -21,7 +21,7 @@ const AddPostDescription = ({ handleShowEditor }) => {
   const textareaRef = useRef(null);
 
   const dispatch = useDispatch();
-  const { image, description } = useSelector((state) => state.addPost);
+  const { image, description } = useSelector((state) => state.post);
 
   const handleSetDescription = (e) => {
     dispatch(setAddPostDescription({ description: e.target.value }));

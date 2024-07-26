@@ -1,57 +1,57 @@
 import { useState } from "react";
 import PostSingleComment from "./PostSingleComment";
-import PostAddComment from "./PostAddComment";
 
-const comments = [
-  {
-    id: 1,
-    username: "shey",
-    user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
-    created_at: "2023-14-03",
-    content:
-      "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
-    replies: [
-      {
-        id: 2,
-        username: "ali",
-        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
-        created_at: "2023-14-03",
-        content: "Follow for more Amazing tips",
-      },
-      {
-        id: 3,
-        username: "hana",
-        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
-        created_at: "2023-14-03",
-        content: "Follow for more Amazing tips",
-      },
-    ],
-  },
-  {
-    id: 1,
-    username: "shey",
-    user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
-    created_at: "2023-14-03",
-    content:
-      "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
-    replies: [
-      {
-        id: 2,
-        username: "ali",
-        user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
-        created_at: "2023-14-03",
-        content: "Follow for more Amazing tips",
-      },
-    ],
-  },
-];
+// const comments = [
+//   {
+//     id: 1,
+//     username: "shey",
+//     user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
+//     created_at: "2023-14-03",
+//     content:
+//       "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
+//     replies: [
+//       {
+//         id: 2,
+//         comment_id: 1,
+//         username: "rose",
+//         user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
+//         created_at: "2023-14-03",
+//         content: "Follow for more Amazing tips",
+//       },
+//       {
+//         id: 3,
+//         comment_id: 1,
+//         username: "hana",
+//         user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
+//         created_at: "2023-14-03",
+//         content: "Follow for more Amazing tips",
+//       },
+//     ],
+//   },
+//   {
+//     id: 6,
+//     username: "shey",
+//     user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
+//     created_at: "2023-14-03",
+//     content:
+//       "We are thrilled to have you as a supporter! Thank you for recommending our platform!",
+//     replies: [
+//       {
+//         id: 7,
+//         comment_id: 6,
+//         username: "rose",
+//         user_image: "/images/wepik-export-20231128203407BKL1.jpeg",
+//         created_at: "2023-14-03",
+//         content: "Follow for more Amazing tips",
+//       },
+//     ],
+//   },
+// ];
 
-const PostComments = () => {
-  const [showReplyInput, setShowReplyInput] = useState(false);
+const PostComments = ({ comments }) => {
   const [selectedCommentId, setSelectedCommentId] = useState(null);
 
   const handleShowReplyInput = (id) => {
-    setShowReplyInput(true);
     setSelectedCommentId(id);
   };
 
@@ -63,17 +63,17 @@ const PostComments = () => {
       {comments?.map((comment) => (
         <div key={comment.id}>
           <PostSingleComment
-            showReplyInput={showReplyInput}
+            showReplyInput={selectedCommentId === comment.id}
             handleShowReplyInput={() => handleShowReplyInput(comment.id)}
             username={comment.username}
             userProfile={comment.user_image}
             content={comment.content}
           />
-          {/* comment replys */}
+          {/* comment replies */}
           {comment.replies.map((rep) => (
             <PostSingleComment
               key={rep.id}
-              showReplyInput={showReplyInput}
+              showReplyInput={selectedCommentId === rep.id}
               handleShowReplyInput={() => handleShowReplyInput(rep.id)}
               isReply={true}
               cln="ml-[4rem]"
@@ -82,7 +82,6 @@ const PostComments = () => {
               content={rep.content}
             />
           ))}
-          {showReplyInput && <PostAddComment cln="mb-[1.5rem] ml-[4rem]" />}
         </div>
       ))}
     </div>

@@ -11,8 +11,10 @@ const SidebarItem = ({ path, icon, activeIcon, label }) => {
   return (
     <Link
       href={path}
-      className={`px-[1.25rem] round medium-height flex items-center ${
-        isActive ? "blue-gradient-bg text-milky font-semibold" : "text-gray"
+      className={`px-[1.25rem] medium-height flex items-center ${
+        isActive
+          ? "blue-gradient-bg text-milky font-semibold rounded-[10rem]"
+          : "text-gray"
       }`}
     >
       <div
@@ -30,7 +32,7 @@ const SidebarItem = ({ path, icon, activeIcon, label }) => {
           )}
           <span className="hidden md:inline-block">{label}</span>
         </div>
-        <GoChevronRight size={20} className="hidden md:block" />
+        <GoChevronRight size={20} color="#639FFF" className="hidden md:block" />
       </div>
     </Link>
   );

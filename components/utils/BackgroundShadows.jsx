@@ -14,7 +14,7 @@ const BackgroundShadows = ({ isWordEntered }) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.5" filter="url(#filter0_f_201_203)">
-            <circle cx="790" cy="222" r="240" fill="#3D0F8A" />
+            <circle cx="790" cy="222" r="240" fill="#10224B" />
           </g>
           <defs>
             <filter

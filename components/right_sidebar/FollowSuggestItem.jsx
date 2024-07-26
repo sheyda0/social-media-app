@@ -11,7 +11,7 @@ const FollowSuggestItem = () => {
           <div className="w-[4.2rem] relative h-[4.2rem]">
             <Link href="/">
               <Image
-                src="/images/wepik-export-20231128203407BKL1.jpeg"
+                src="/images/2148107064 (1).jpg"
                 fill
                 className="object-cover rounded-full"
                 alt=""

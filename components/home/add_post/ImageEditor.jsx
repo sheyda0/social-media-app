@@ -9,7 +9,7 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import { openEditor } from "react-profile";
 import "react-profile/themes/dark";
 import { useDispatch, useSelector } from "react-redux";
-import { setAddPostImage } from "@/redux/features/add_post/addPostSlice";
+import { setAddPostImage } from "@/redux/features/post/postSlice";
 
 const ImageEditor = ({ handleHideEditor, showEditor }) => {
   const dispatch = useDispatch();

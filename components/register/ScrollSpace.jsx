@@ -87,7 +87,7 @@ const ScrollSpace = () => {
       </div>
 
       <div className="space-scroll-title z-50">
-        <h1>Welcome to StarlightVoyage</h1>
+        <h1>Welcome to my project</h1>
         <h2>Have a little scroll</h2>
       </div>
     </div>

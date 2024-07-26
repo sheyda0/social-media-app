@@ -12,7 +12,7 @@ const FollowerItem = () => {
       >
         <div className="flex gap-[0.75rem]">
           <Image
-            src="/images/wepik-export-20231128203407BKL1.jpeg"
+            src="/images/2148107064 (1).jpg"
             width={55}
             height={55}
             className="round"

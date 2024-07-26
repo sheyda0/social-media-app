@@ -9,7 +9,7 @@ import PostImage from "./PostImage";
 import PostUserProfile from "./PostUserProfile";
 import BlurContainer from "../containers/BlurContainer";
 
-const Post = ({ image, description, author, likes }) => {
+const Post = ({ image, description, author, likes, id, comments }) => {
   const [showComments, setShowComments] = useState(false);
 
   const handleShowComments = () => {
@@ -25,8 +25,8 @@ const Post = ({ image, description, author, likes }) => {
         <PostFooter handleShowComments={handleShowComments} likes={likes} />
         {showComments && (
           <div>
-            <PostAddComment />
-            <PostComments />
+            <PostAddComment id={id} />
+            <PostComments comments={comments} />
           </div>
         )}
       </div>

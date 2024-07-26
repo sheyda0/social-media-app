@@ -7,8 +7,23 @@ import SocialLoginButton from "./SocialLoginButton";
 import { FiGithub } from "react-icons/fi";
 import { SiGoogle } from "react-icons/si";
 import GalaxyButton from "../buttons/galaxy-button/GalaxyButton";
+import { useRouter } from "next/navigation";
+import PasswordEyeButton from "./PasswordEyeButton";
+import { useState } from "react";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+
+  const handleShowPassword = () => {
+    setShowPassword((prev) => !prev);
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    router.push("/home");
+  };
+
   return (
     <div className="form sign-in flex flex-col justify-center items-center w-[85.5vw] md:w-[70vw]">
       <div className="flex flex-col w-[75vw] md:w-[30rem]">
@@ -31,15 +46,24 @@ const Login = () => {
             required={true}
             name="email"
             type="email"
+            value="test@test.com"
           />
-          <Input
-            placeholder="Password"
-            name="password"
-            type="password"
-            cln="mb-[1.5rem] w-full"
-            required={true}
-          />
-          <GalaxyButton>Sign In</GalaxyButton>
+          <div className="relative">
+            <Input
+              placeholder="Password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              cln="mb-[1.5rem] w-full"
+              required={true}
+              value="test"
+            />
+
+            <PasswordEyeButton
+              show={showPassword}
+              onClick={handleShowPassword}
+            />
+          </div>
+          <GalaxyButton onClick={handleLogin}>Sign In</GalaxyButton>
         </form>
       </div>
     </div>

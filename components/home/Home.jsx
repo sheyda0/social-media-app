@@ -16,10 +16,12 @@ const Home = () => {
         {sortedPosts.map((post) => (
           <Post
             key={post.id}
+            id={post.id}
             image={post.image}
             description={post.description}
             author={post.author}
             likes={post.likes}
+            comments={post.comments}
           />
         ))}
       </div>
